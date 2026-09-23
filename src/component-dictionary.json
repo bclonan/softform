@@ -1,0 +1,2721 @@
+{
+  "SfAccordion": {
+    "name": "SfAccordion",
+    "tag": "sf-accordion",
+    "category": "Disclosure",
+    "purpose": "Native details elements preserve open/close and keyboard behavior. Multiple sections may remain open.",
+    "whenToUse": "Use for a short list of questions or sections that readers can expand independently.",
+    "avoidWhen": "Do not hide required form fields or essential safety text.",
+    "props": [
+      {
+        "name": "items",
+        "type": "Array",
+        "default": "none"
+      }
+    ],
+    "events": [],
+    "exampleVue": "<sf-accordion :items=\"[{\n  title: \\'Can I customize the materials?\\',\n  content: \\'Yes. Edit the shared CSS tokens.\\'\n}]\" />",
+    "importVue": "import { SfAccordion } from '@bclonan/softform';",
+    "importElement": "import { registerSfAccordion } from '@bclonan/softform/elements/SfAccordion';",
+    "motion": "Open state changes with a short transition.",
+    "demo": {
+      "props": {
+        "items": [
+          {
+            "title": "How does it work?",
+            "content": "Use native HTML controls and shared Softform tokens."
+          }
+        ]
+      },
+      "slot": ""
+    }
+  },
+  "SfAdaptedCards": {
+    "name": "SfAdaptedCards",
+    "tag": "sf-adapted-cards",
+    "category": "Data",
+    "purpose": "Injects a registry, normalizes the provider payload, validates an immutable CardModel array, then renders provider-agnostic notification cards.",
+    "whenToUse": "Use when notification cards arrive from REST, GraphQL, legacy records, or a custom provider.",
+    "avoidWhen": "Do not pass provider payloads directly to presentation cards.",
+    "props": [
+      {
+        "name": "adapter",
+        "type": "String",
+        "default": "'rest'"
+      },
+      {
+        "name": "payload",
+        "type": "Object",
+        "default": "required"
+      },
+      {
+        "name": "registry",
+        "type": "Object",
+        "default": "injected registry"
+      }
+    ],
+    "events": [
+      "select",
+      "adapted",
+      "error"
+    ],
+    "exampleVue": "<sf-adapted-cards adapter=\"rest\" :payload=\"apiResponse\"\n  @select=\"openCard\" @error=\"reportError\" />",
+    "importVue": "import { SfAdaptedCards } from '@bclonan/softform';",
+    "importElement": "import { registerSfAdaptedCards } from '@bclonan/softform/elements/SfAdaptedCards';",
+    "motion": "Value or highlight changes use short transitions.",
+    "demo": {
+      "props": {
+        "adapter": "rest",
+        "payload": {
+          "notifications": [
+            {
+              "notification_id": "n-1",
+              "category": "message",
+              "subject": "Design review",
+              "preview": "The team left comments on the new layout.",
+              "sender": {
+                "display_name": "Maya Chen"
+              },
+              "received_at": "09:41",
+              "unread_count": 2
+            }
+          ]
+        }
+      },
+      "slot": ""
+    }
+  },
+  "SfAlert": {
+    "name": "SfAlert",
+    "tag": "sf-alert",
+    "category": "Feedback",
+    "purpose": "Informational, warning, and error states. Errors use alert semantics; other messages use status.",
+    "whenToUse": "Use for a persistent message that needs attention in the current context.",
+    "avoidWhen": "Use SfToast for a brief confirmation that can disappear.",
+    "props": [
+      {
+        "name": "as",
+        "type": "String",
+        "default": "'div'"
+      },
+      {
+        "name": "title",
+        "type": "String",
+        "default": "'A little heads up'"
+      },
+      {
+        "name": "message",
+        "type": "String",
+        "default": "none"
+      },
+      {
+        "name": "tone",
+        "type": "String",
+        "default": "'info'"
+      }
+    ],
+    "events": [],
+    "exampleVue": "<sf-alert tone=\"warning\" title=\"One small thing\"\n  message=\"Review your changes before continuing.\" />",
+    "importVue": "import { SfAlert } from '@bclonan/softform';",
+    "importElement": "import { registerSfAlert } from '@bclonan/softform/elements/SfAlert';",
+    "motion": "Visibility and status changes use short transitions.",
+    "demo": {
+      "props": {
+        "as": "div",
+        "title": "A little heads up",
+        "tone": "info"
+      },
+      "slot": "Review the details"
+    }
+  },
+  "SfAvatar": {
+    "name": "SfAvatar",
+    "tag": "sf-avatar",
+    "category": "Identity",
+    "purpose": "Initials or a decorative icon, with an accessible name and three size options.",
+    "whenToUse": "Use an initial or icon to identify a person or source in a compact space.",
+    "avoidWhen": "Do not use an unlabeled avatar as the only name for a person.",
+    "props": [
+      {
+        "name": "initials",
+        "type": "String",
+        "default": "'SF'"
+      },
+      {
+        "name": "icon",
+        "type": "String",
+        "default": "none"
+      },
+      {
+        "name": "size",
+        "type": "String",
+        "default": "none"
+      },
+      {
+        "name": "tone",
+        "type": "String",
+        "default": "none"
+      },
+      {
+        "name": "label",
+        "type": "String",
+        "default": "none"
+      }
+    ],
+    "events": [],
+    "exampleVue": "<sf-avatar initials=\"AM\" label=\"Brad Morgan\"\n  tone=\"dark\" size=\"large\" />",
+    "importVue": "import { SfAvatar } from '@bclonan/softform';",
+    "importElement": "import { registerSfAvatar } from '@bclonan/softform/elements/SfAvatar';",
+    "motion": "Appearance follows surrounding state changes.",
+    "demo": {
+      "props": {
+        "initials": "SF"
+      },
+      "slot": ""
+    }
+  },
+  "SfBadge": {
+    "name": "SfBadge",
+    "tag": "sf-badge",
+    "category": "Status",
+    "purpose": "Compact status, count, and metadata markers. Four treatments: default, accent, dark, outline.",
+    "whenToUse": "Use for a short status, count, or category beside other content.",
+    "avoidWhen": "Do not use a badge as a button or for long sentences.",
+    "props": [
+      {
+        "name": "as",
+        "type": "String",
+        "default": "'span'"
+      },
+      {
+        "name": "tone",
+        "type": "String",
+        "default": "''"
+      },
+      {
+        "name": "dot",
+        "type": "Boolean",
+        "default": "false"
+      }
+    ],
+    "events": [],
+    "exampleVue": "<sf-badge tone=\"accent\" :dot=\"true\">Live</sf-badge>",
+    "importVue": "import { SfBadge } from '@bclonan/softform';",
+    "importElement": "import { registerSfBadge } from '@bclonan/softform/elements/SfBadge';",
+    "motion": "Tone and emphasis changes use short transitions.",
+    "demo": {
+      "props": {
+        "as": "span",
+        "tone": "accent",
+        "dot": false
+      },
+      "slot": "Live"
+    }
+  },
+  "SfBarChart": {
+    "name": "SfBarChart",
+    "tag": "sf-bar-chart",
+    "category": "Data",
+    "purpose": "A lightweight HTML/CSS chart with a full textual data description. No canvas or chart library dependency.",
+    "whenToUse": "Use to compare a small sequence of values, such as activity by day.",
+    "avoidWhen": "Use a table when precise values matter more than the shape of the data.",
+    "props": [
+      {
+        "name": "values",
+        "type": "Array",
+        "default": "none"
+      },
+      {
+        "name": "labels",
+        "type": "Array",
+        "default": "none"
+      },
+      {
+        "name": "label",
+        "type": "String",
+        "default": "'Activity'"
+      },
+      {
+        "name": "unit",
+        "type": "String",
+        "default": "'THIS WEEK'"
+      },
+      {
+        "name": "highlight",
+        "type": "Number",
+        "default": "5"
+      },
+      {
+        "name": "loading",
+        "type": "Boolean",
+        "default": "false"
+      },
+      {
+        "name": "orientation",
+        "type": "String",
+        "default": "'vertical'"
+      },
+      {
+        "name": "accentColor",
+        "type": "String",
+        "default": "''"
+      },
+      {
+        "name": "motionDelay",
+        "type": "Number",
+        "default": "0"
+      },
+      {
+        "name": "motionDuration",
+        "type": "Number",
+        "default": "650"
+      },
+      {
+        "name": "stagger",
+        "type": "Number",
+        "default": "80"
+      },
+      {
+        "name": "animateOnMount",
+        "type": "Boolean",
+        "default": "true"
+      }
+    ],
+    "events": [],
+    "exampleVue": "<SfBarChart :values=\"[28,43,35,62,49,84,61]\"\n  :labels=\"['M','T','W','T','F','S','S']\"\n  :highlight=\"5\" label=\"Activity\" :loading=\"pending\"\n  :motion-delay=\"200\" :motion-duration=\"760\" :stagger=\"90\" />",
+    "importVue": "import { SfBarChart } from '@bclonan/softform';",
+    "importElement": "import { registerSfBarChart } from '@bclonan/softform/elements/SfBarChart';",
+    "motion": "Bars and numeric labels rise after motionDelay, with stagger between columns and motionDuration controlling the move.",
+    "demo": {
+      "props": {
+        "label": "Activity",
+        "unit": "THIS WEEK",
+        "highlight": 5,
+        "orientation": "vertical",
+        "accentColor": "#ffe247",
+        "loading": false,
+        "motionDelay": 180,
+        "motionDuration": 760,
+        "stagger": 90,
+        "animateOnMount": true
+      },
+      "slot": ""
+    }
+  },
+  "SfBottomNav": {
+    "name": "SfBottomNav",
+    "tag": "sf-bottom-nav",
+    "category": "Navigation",
+    "purpose": "A compact navigation bar for phone-sized layouts, with visible labels and an accent active state.",
+    "whenToUse": "Use for a small set of primary destinations in a narrow layout.",
+    "avoidWhen": "Do not use for a long list of routes.",
+    "props": [
+      {
+        "name": "modelValue",
+        "type": "String",
+        "default": "none"
+      },
+      {
+        "name": "items",
+        "type": "Array",
+        "default": "none"
+      },
+      {
+        "name": "motion",
+        "type": "Boolean",
+        "default": "true"
+      },
+      {
+        "name": "motionDelay",
+        "type": "Number",
+        "default": "0"
+      },
+      {
+        "name": "motionDuration",
+        "type": "Number",
+        "default": "360"
+      },
+      {
+        "name": "motionEasing",
+        "type": "String",
+        "default": "'cubic-bezier(.2,.8,.2,1)'"
+      }
+    ],
+    "events": [
+      "update:modelValue"
+    ],
+    "exampleVue": "<sf-bottom-nav v-model=\"page\" :items=\"navigation\" />",
+    "importVue": "import { SfBottomNav } from '@bclonan/softform';",
+    "importElement": "import { registerSfBottomNav } from '@bclonan/softform/elements/SfBottomNav';",
+    "motion": "The selected icon fills from the previous destination; motion, delay, duration, and easing are configurable.",
+    "demo": {
+      "props": {
+        "modelValue": "home",
+        "items": [
+          {
+            "label": "Home",
+            "value": "home",
+            "icon": "home"
+          },
+          {
+            "label": "Inbox",
+            "value": "inbox",
+            "icon": "inbox"
+          }
+        ],
+        "motion": true,
+        "motionDelay": 0,
+        "motionDuration": 420,
+        "motionEasing": "cubic-bezier(.2,.8,.2,1)"
+      },
+      "slot": ""
+    }
+  },
+  "SfBreadcrumbs": {
+    "name": "SfBreadcrumbs",
+    "tag": "sf-breadcrumbs",
+    "category": "Navigation",
+    "purpose": "A path with a current-page marker. Earlier items emit navigate events for your router or view state.",
+    "whenToUse": "Use to show a location within a hierarchy and allow movement to ancestors.",
+    "avoidWhen": "Do not use for steps in a linear form.",
+    "props": [
+      {
+        "name": "items",
+        "type": "Array",
+        "default": "none"
+      }
+    ],
+    "events": [
+      "navigate"
+    ],
+    "exampleVue": "<sf-breadcrumbs :items=\"[\\'Library\\', \\'Controls\\', \\'Dial\\']\"\n  @navigate=\"navigate\" />",
+    "importVue": "import { SfBreadcrumbs } from '@bclonan/softform';",
+    "importElement": "import { registerSfBreadcrumbs } from '@bclonan/softform/elements/SfBreadcrumbs';",
+    "motion": "The active destination or panel changes with a short transition.",
+    "demo": {
+      "props": {
+        "items": [
+          "Workspace",
+          "Projects",
+          "Softform"
+        ]
+      },
+      "slot": ""
+    }
+  },
+  "SfButton": {
+    "name": "SfButton",
+    "tag": "sf-button",
+    "category": "Action",
+    "purpose": "Surface, dark, accent, and ghost actions. Supports icons, loading, and disabled states.",
+    "whenToUse": "Use for a discrete action such as save, create, or submit.",
+    "avoidWhen": "Use a native link for navigation.",
+    "props": [
+      {
+        "name": "variant",
+        "type": "String",
+        "default": "'surface'"
+      },
+      {
+        "name": "size",
+        "type": "String",
+        "default": "none"
+      },
+      {
+        "name": "icon",
+        "type": "String",
+        "default": "none"
+      },
+      {
+        "name": "loading",
+        "type": "Boolean",
+        "default": "false"
+      },
+      {
+        "name": "disabled",
+        "type": "Boolean",
+        "default": "false"
+      },
+      {
+        "name": "type",
+        "type": "String",
+        "default": "'button'"
+      }
+    ],
+    "events": [
+      "click"
+    ],
+    "exampleVue": "<sf-button variant=\"accent\" icon=\"plus\"\n  @click=\"createWorkspace\">Create workspace</sf-button>",
+    "importVue": "import { SfButton } from '@bclonan/softform';",
+    "importElement": "import { registerSfButton } from '@bclonan/softform/elements/SfButton';",
+    "motion": "Hover, focus, press, and disabled states respond immediately.",
+    "demo": {
+      "props": {
+        "variant": "surface",
+        "loading": false,
+        "disabled": false,
+        "type": "button"
+      },
+      "slot": "Create workspace"
+    }
+  },
+  "SfButtonGroup": {
+    "name": "SfButtonGroup",
+    "tag": "sf-button-group",
+    "category": "Action",
+    "purpose": "A compact controlled group for related tools. It emits a new value without mutating props.",
+    "whenToUse": "Use when one compact toolbar controls a related set of choices.",
+    "avoidWhen": "Use SfRadioGroup when the choices need visible descriptions.",
+    "props": [
+      {
+        "name": "modelValue",
+        "type": "String",
+        "default": "none"
+      },
+      {
+        "name": "options",
+        "type": "Array",
+        "default": "none"
+      },
+      {
+        "name": "label",
+        "type": "String",
+        "default": "'Button group'"
+      },
+      {
+        "name": "motion",
+        "type": "Boolean",
+        "default": "true"
+      },
+      {
+        "name": "motionDelay",
+        "type": "Number",
+        "default": "0"
+      },
+      {
+        "name": "motionDuration",
+        "type": "Number",
+        "default": "360"
+      },
+      {
+        "name": "motionEasing",
+        "type": "String",
+        "default": "'cubic-bezier(.2,.8,.2,1)'"
+      }
+    ],
+    "events": [
+      "update:modelValue"
+    ],
+    "exampleVue": "<sf-button-group v-model=\"alignment\"\n  label=\"Text alignment\" :options=\"alignments\" />",
+    "importVue": "import { SfButtonGroup } from '@bclonan/softform';",
+    "importElement": "import { registerSfButtonGroup } from '@bclonan/softform/elements/SfButtonGroup';",
+    "motion": "The pressed option fills from the previous choice; motion, delay, duration, and easing are configurable.",
+    "demo": {
+      "props": {
+        "label": "Button group",
+        "modelValue": "left",
+        "options": [
+          {
+            "label": "Left",
+            "value": "left"
+          },
+          {
+            "label": "Center",
+            "value": "center"
+          }
+        ],
+        "motion": true,
+        "motionDelay": 0,
+        "motionDuration": 420,
+        "motionEasing": "cubic-bezier(.2,.8,.2,1)"
+      },
+      "slot": ""
+    }
+  },
+  "SfCalendar": {
+    "name": "SfCalendar",
+    "tag": "sf-calendar",
+    "category": "Date",
+    "purpose": "A selectable local calendar with month navigation and arrow-key movement between dates.",
+    "whenToUse": "Use for choosing one date while browsing adjacent months.",
+    "avoidWhen": "Use a native date input when a compact form field is more useful.",
+    "props": [
+      {
+        "name": "modelValue",
+        "type": "String",
+        "default": "'2026-09-23'"
+      }
+    ],
+    "events": [
+      "update:modelValue"
+    ],
+    "exampleVue": "<sf-calendar v-model=\"selectedDate\" />",
+    "importVue": "import { SfCalendar } from '@bclonan/softform';",
+    "importElement": "import { registerSfCalendar } from '@bclonan/softform/elements/SfCalendar';",
+    "motion": "Month grids crossfade and slide; selection changes color.",
+    "demo": {
+      "props": {
+        "modelValue": "2026-09-23"
+      },
+      "slot": ""
+    }
+  },
+  "SfCheckbox": {
+    "name": "SfCheckbox",
+    "tag": "sf-checkbox",
+    "category": "Input",
+    "purpose": "A native checkbox with a clear selected state, label, and disabled option.",
+    "whenToUse": "Use for one independent yes or no option.",
+    "avoidWhen": "Use SfRadioGroup for mutually exclusive choices.",
+    "props": [
+      {
+        "name": "modelValue",
+        "type": "Boolean",
+        "default": "false"
+      },
+      {
+        "name": "label",
+        "type": "String",
+        "default": "'Checkbox'"
+      },
+      {
+        "name": "disabled",
+        "type": "Boolean",
+        "default": "false"
+      }
+    ],
+    "events": [
+      "update:modelValue"
+    ],
+    "exampleVue": "<sf-checkbox v-model=\"notifications\"\n  label=\"Email notifications\" />",
+    "importVue": "import { SfCheckbox } from '@bclonan/softform';",
+    "importElement": "import { registerSfCheckbox } from '@bclonan/softform/elements/SfCheckbox';",
+    "motion": "Selection and focus states use short transitions.",
+    "demo": {
+      "props": {
+        "modelValue": true,
+        "label": "Email updates",
+        "disabled": false
+      },
+      "slot": ""
+    }
+  },
+  "SfClock": {
+    "name": "SfClock",
+    "tag": "sf-clock",
+    "category": "Data",
+    "purpose": "A real local clock. The interval is cleaned up on unmount. No server or external time service is used.",
+    "whenToUse": "Use when the user needs the current local time in a dashboard.",
+    "avoidWhen": "Do not use it as a countdown or server-time claim.",
+    "props": [
+      {
+        "name": "label",
+        "type": "String",
+        "default": "'Your local time'"
+      }
+    ],
+    "events": [],
+    "exampleVue": "<sf-clock label=\"Your local time\" />",
+    "importVue": "import { SfClock } from '@bclonan/softform';",
+    "importElement": "import { registerSfClock } from '@bclonan/softform/elements/SfClock';",
+    "motion": "Value or highlight changes use short transitions.",
+    "demo": {
+      "props": {
+        "label": "Your local time"
+      },
+      "slot": ""
+    }
+  },
+  "SfDial": {
+    "name": "SfDial",
+    "tag": "sf-dial",
+    "category": "Input",
+    "purpose": "A physical dial driven by a native horizontal range. Drag left/right or use arrow keys to adjust.",
+    "whenToUse": "Use for a tactile percentage control when an approximate value is acceptable.",
+    "avoidWhen": "Use SfInput or SfStepper for a precise number.",
+    "props": [
+      {
+        "name": "modelValue",
+        "type": "Number",
+        "default": "64"
+      },
+      {
+        "name": "label",
+        "type": "String",
+        "default": "'Intensity'"
+      }
+    ],
+    "events": [
+      "update:modelValue"
+    ],
+    "exampleVue": "<sf-dial v-model=\"intensity\" label=\"Light intensity\" />",
+    "importVue": "import { SfDial } from '@bclonan/softform';",
+    "importElement": "import { registerSfDial } from '@bclonan/softform/elements/SfDial';",
+    "motion": "Selection and focus states use short transitions.",
+    "demo": {
+      "props": {
+        "modelValue": 64,
+        "label": "Intensity"
+      },
+      "slot": ""
+    }
+  },
+  "SfDivider": {
+    "name": "SfDivider",
+    "tag": "sf-divider",
+    "category": "Layout",
+    "purpose": "A hairline separator with an optional centered label.",
+    "whenToUse": "Use to separate nearby groups or label an alternative path.",
+    "avoidWhen": "Do not use repeated dividers to replace spacing and headings.",
+    "props": [
+      {
+        "name": "as",
+        "type": "String",
+        "default": "'div'"
+      }
+    ],
+    "events": [],
+    "exampleVue": "<sf-divider>or continue with</sf-divider>",
+    "importVue": "import { SfDivider } from '@bclonan/softform';",
+    "importElement": "import { registerSfDivider } from '@bclonan/softform/elements/SfDivider';",
+    "motion": "Elevation and tone changes use short transitions.",
+    "demo": {
+      "props": {
+        "as": "div"
+      },
+      "slot": "or continue with"
+    }
+  },
+  "SfDonutChart": {
+    "name": "SfDonutChart",
+    "tag": "sf-donut-chart",
+    "category": "Data",
+    "purpose": "A CSS conic-gradient ring, numeric center, and legend. Provide a percentage from 0 to 100.",
+    "whenToUse": "Use to show one part of a whole with a short label.",
+    "avoidWhen": "Use a table or bar chart for multiple exact comparisons.",
+    "props": [
+      {
+        "name": "value",
+        "type": "Number",
+        "default": "72"
+      },
+      {
+        "name": "label",
+        "type": "String",
+        "default": "'Focus'"
+      },
+      {
+        "name": "primary",
+        "type": "String",
+        "default": "'Focused'"
+      },
+      {
+        "name": "secondary",
+        "type": "String",
+        "default": "'Available'"
+      },
+      {
+        "name": "size",
+        "type": "Number",
+        "default": "110"
+      },
+      {
+        "name": "thickness",
+        "type": "Number",
+        "default": "9"
+      },
+      {
+        "name": "primaryColor",
+        "type": "String",
+        "default": "''"
+      },
+      {
+        "name": "secondaryColor",
+        "type": "String",
+        "default": "''"
+      },
+      {
+        "name": "loading",
+        "type": "Boolean",
+        "default": "false"
+      },
+      {
+        "name": "motionDelay",
+        "type": "Number",
+        "default": "0"
+      },
+      {
+        "name": "motionDuration",
+        "type": "Number",
+        "default": "650"
+      },
+      {
+        "name": "animateOnMount",
+        "type": "Boolean",
+        "default": "true"
+      }
+    ],
+    "events": [],
+    "exampleVue": "<sf-donut-chart :value=\"72\" label=\"Focus\"\n  primary=\"Focused\" secondary=\"Available\" />",
+    "importVue": "import { SfDonutChart } from '@bclonan/softform';",
+    "importElement": "import { registerSfDonutChart } from '@bclonan/softform/elements/SfDonutChart';",
+    "motion": "The ring and center number count toward a new percentage after motionDelay.",
+    "demo": {
+      "props": {
+        "value": 72,
+        "label": "Focus",
+        "primary": "Focused",
+        "secondary": "Available",
+        "size": 110,
+        "thickness": 9,
+        "primaryColor": "#151a1d",
+        "secondaryColor": "#b3c2cc",
+        "loading": false,
+        "motionDelay": 200,
+        "motionDuration": 760,
+        "animateOnMount": true
+      },
+      "slot": ""
+    }
+  },
+  "SfDrawer": {
+    "name": "SfDrawer",
+    "tag": "sf-drawer",
+    "category": "Overlay",
+    "purpose": "A right-side native dialog for settings and contextual details. Its content is provided through slots.",
+    "whenToUse": "Use for settings or supporting details that should slide in beside the task.",
+    "avoidWhen": "Use SfModal for a short decision that needs centered attention.",
+    "props": [
+      {
+        "name": "modelValue",
+        "type": "Boolean",
+        "default": "false"
+      },
+      {
+        "name": "title",
+        "type": "String",
+        "default": "'Workspace settings'"
+      }
+    ],
+    "events": [
+      "update:modelValue"
+    ],
+    "exampleVue": "<sf-drawer v-model=\"open\" title=\"Workspace settings\">\n  <sf-switch v-model=\"notifications\" label=\"Notifications\" />\n</sf-drawer>",
+    "importVue": "import { SfDrawer } from '@bclonan/softform';",
+    "importElement": "import { registerSfDrawer } from '@bclonan/softform/elements/SfDrawer';",
+    "motion": "The panel slides in and out with reduced-motion support.",
+    "demo": {
+      "props": {
+        "modelValue": true,
+        "title": "Workspace settings"
+      },
+      "slot": "Drawer content"
+    }
+  },
+  "SfDropdown": {
+    "name": "SfDropdown",
+    "tag": "sf-dropdown",
+    "category": "Action",
+    "purpose": "A floating action menu with outside-click dismissal, Escape, focus restoration, and arrow-key navigation.",
+    "whenToUse": "Use for a short list of secondary actions attached to a trigger.",
+    "avoidWhen": "Do not use as a form select.",
+    "props": [
+      {
+        "name": "label",
+        "type": "String",
+        "default": "'Quick actions'"
+      },
+      {
+        "name": "items",
+        "type": "Array",
+        "default": "none"
+      }
+    ],
+    "events": [
+      "select"
+    ],
+    "exampleVue": "<sf-dropdown label=\"Quick actions\" :items=\"actions\"\n  @select=\"handleAction\" />",
+    "importVue": "import { SfDropdown } from '@bclonan/softform';",
+    "importElement": "import { registerSfDropdown } from '@bclonan/softform/elements/SfDropdown';",
+    "motion": "Hover, focus, press, and disabled states respond immediately.",
+    "demo": {
+      "props": {
+        "label": "Quick actions"
+      },
+      "slot": ""
+    }
+  },
+  "SfElement": {
+    "name": "SfElement",
+    "tag": "sf-element",
+    "category": "Semantic",
+    "purpose": "Renders any native HTML tag in Vue while forwarding its attributes and slot content.",
+    "whenToUse": "Use to choose any valid native HTML root while preserving attributes and slots.",
+    "avoidWhen": "Use a specialized control when native interaction is needed.",
+    "props": [
+      {
+        "name": "as",
+        "type": "String",
+        "default": "'div'"
+      }
+    ],
+    "events": [],
+    "exampleVue": "<SfElement as=\"article\" aria-labelledby=\"report-title\">\n  <h2 id=\"report-title\">Quarterly report</h2>\n</SfElement>",
+    "importVue": "import { SfElement } from '@bclonan/softform';",
+    "importElement": "import { registerSfElement } from '@bclonan/softform/elements/SfElement';",
+    "motion": "Motion comes from the native element or its children.",
+    "demo": {
+      "props": {
+        "as": "section"
+      },
+      "slot": "Semantic section"
+    }
+  },
+  "SfEmptyState": {
+    "name": "SfEmptyState",
+    "tag": "sf-empty-state",
+    "category": "Feedback",
+    "purpose": "A composed icon, title, supporting text, and optional action for a meaningful blank state.",
+    "whenToUse": "Use when a collection has no items and the next action is clear.",
+    "avoidWhen": "Do not show it while content is still loading.",
+    "props": [
+      {
+        "name": "as",
+        "type": "String",
+        "default": "'div'"
+      },
+      {
+        "name": "title",
+        "type": "String",
+        "default": "'A little room for possibility.'"
+      },
+      {
+        "name": "message",
+        "type": "String",
+        "default": "'Your collection starts with a single component.'"
+      },
+      {
+        "name": "action",
+        "type": "String",
+        "default": "'Create collection'"
+      },
+      {
+        "name": "icon",
+        "type": "String",
+        "default": "'inbox'"
+      }
+    ],
+    "events": [
+      "action"
+    ],
+    "exampleVue": "<sf-empty-state title=\"All caught up.\"\n  message=\"No new messages.\" action=\"New message\"\n  @action=\"compose\" />",
+    "importVue": "import { SfEmptyState } from '@bclonan/softform';",
+    "importElement": "import { registerSfEmptyState } from '@bclonan/softform/elements/SfEmptyState';",
+    "motion": "Visibility and status changes use short transitions.",
+    "demo": {
+      "props": {
+        "as": "div",
+        "title": "A little room for possibility.",
+        "message": "Your collection starts with a single component.",
+        "action": "Create collection",
+        "icon": "inbox"
+      },
+      "slot": ""
+    }
+  },
+  "SfFab": {
+    "name": "SfFab",
+    "tag": "sf-fab",
+    "category": "Action",
+    "purpose": "A prominent, pill-shaped entry point for a primary creation flow.",
+    "whenToUse": "Use for the main creation action when the layout can give it clear space.",
+    "avoidWhen": "Do not add several floating primary actions to one view.",
+    "props": [
+      {
+        "name": "icon",
+        "type": "String",
+        "default": "'plus'"
+      },
+      {
+        "name": "label",
+        "type": "String",
+        "default": "'Create new'"
+      }
+    ],
+    "events": [
+      "click"
+    ],
+    "exampleVue": "<sf-fab label=\"New workspace\" icon=\"plus\"\n  @click=\"openCreator\" />",
+    "importVue": "import { SfFab } from '@bclonan/softform';",
+    "importElement": "import { registerSfFab } from '@bclonan/softform/elements/SfFab';",
+    "motion": "Hover, focus, press, and disabled states respond immediately.",
+    "demo": {
+      "props": {
+        "icon": "plus",
+        "label": "Create new"
+      },
+      "slot": ""
+    }
+  },
+  "SfFileUpload": {
+    "name": "SfFileUpload",
+    "tag": "sf-file-upload",
+    "category": "Input",
+    "purpose": "Choose or drop a local file. The component emits a File object; it does not send data anywhere. Accept filters the chooser only; validate dropped files in your application.",
+    "whenToUse": "Use for local file selection with drag and drop feedback.",
+    "avoidWhen": "Do not imply that selection uploads or stores a file.",
+    "props": [
+      {
+        "name": "accept",
+        "type": "String",
+        "default": "'.png,.jpg,.jpeg,.svg,.json'"
+      },
+      {
+        "name": "label",
+        "type": "String",
+        "default": "'Drop a file here'"
+      }
+    ],
+    "events": [
+      "select"
+    ],
+    "exampleVue": "<sf-file-upload accept=\".png,.jpg,.svg\"\n  @select=\"file = $event\" />",
+    "importVue": "import { SfFileUpload } from '@bclonan/softform';",
+    "importElement": "import { registerSfFileUpload } from '@bclonan/softform/elements/SfFileUpload';",
+    "motion": "Selection and focus states use short transitions.",
+    "demo": {
+      "props": {
+        "accept": ".png,.jpg,.jpeg,.svg,.json",
+        "label": "Drop a file here"
+      },
+      "slot": ""
+    }
+  },
+  "SfIcon": {
+    "name": "SfIcon",
+    "tag": "sf-icon",
+    "category": "Graphic",
+    "purpose": "Hand-drawn inline SVG icons. Icons are decorative; provide the accessible label on the surrounding control.",
+    "whenToUse": "Use for a decorative symbol next to text or inside a labeled control.",
+    "avoidWhen": "Do not use a bare icon as the only accessible action label.",
+    "props": [
+      {
+        "name": "name",
+        "type": "String",
+        "default": "'circle'"
+      },
+      {
+        "name": "size",
+        "type": "String",
+        "default": "''"
+      }
+    ],
+    "events": [],
+    "exampleVue": "<sf-icon name=\"sliders\" size=\"lg\" />",
+    "importVue": "import { SfIcon } from '@bclonan/softform';",
+    "importElement": "import { registerSfIcon } from '@bclonan/softform/elements/SfIcon';",
+    "motion": "Color and scale follow the surrounding control.",
+    "demo": {
+      "props": {
+        "name": "spark",
+        "size": "lg"
+      },
+      "slot": ""
+    }
+  },
+  "SfIconButton": {
+    "name": "SfIconButton",
+    "tag": "sf-icon-button",
+    "category": "Action",
+    "purpose": "A tactile round control. Every instance requires a descriptive label.",
+    "whenToUse": "Use for a compact action whose accessible label can be concise.",
+    "avoidWhen": "Use SfButton when the action text should remain visible.",
+    "props": [
+      {
+        "name": "icon",
+        "type": "String",
+        "default": "'plus'"
+      },
+      {
+        "name": "label",
+        "type": "String",
+        "default": "required"
+      },
+      {
+        "name": "tone",
+        "type": "String",
+        "default": "none"
+      },
+      {
+        "name": "size",
+        "type": "String",
+        "default": "none"
+      },
+      {
+        "name": "disabled",
+        "type": "Boolean",
+        "default": "false"
+      },
+      {
+        "name": "pressed",
+        "type": "Boolean",
+        "default": "false"
+      }
+    ],
+    "events": [
+      "click"
+    ],
+    "exampleVue": "<sf-icon-button icon=\"heart\" label=\"Save item\"\n  tone=\"accent\" :pressed=\"saved\" @click=\"saved = !saved\" />",
+    "importVue": "import { SfIconButton } from '@bclonan/softform';",
+    "importElement": "import { registerSfIconButton } from '@bclonan/softform/elements/SfIconButton';",
+    "motion": "Hover, focus, press, and disabled states respond immediately.",
+    "demo": {
+      "props": {
+        "icon": "heart",
+        "disabled": false,
+        "pressed": false,
+        "label": "Save item"
+      },
+      "slot": ""
+    }
+  },
+  "SfInput": {
+    "name": "SfInput",
+    "tag": "sf-input",
+    "category": "Input",
+    "purpose": "A native input inside an inset material, with explicit label, icon, hint, and error state.",
+    "whenToUse": "Use for a labeled single-line value with hint or error feedback.",
+    "avoidWhen": "Use SfTextarea for longer writing.",
+    "props": [
+      {
+        "name": "modelValue",
+        "type": "String, Number",
+        "default": "''"
+      },
+      {
+        "name": "label",
+        "type": "String",
+        "default": "none"
+      },
+      {
+        "name": "placeholder",
+        "type": "String",
+        "default": "none"
+      },
+      {
+        "name": "type",
+        "type": "String",
+        "default": "'text'"
+      },
+      {
+        "name": "icon",
+        "type": "String",
+        "default": "none"
+      },
+      {
+        "name": "hint",
+        "type": "String",
+        "default": "none"
+      },
+      {
+        "name": "error",
+        "type": "String",
+        "default": "none"
+      },
+      {
+        "name": "disabled",
+        "type": "Boolean",
+        "default": "false"
+      },
+      {
+        "name": "required",
+        "type": "Boolean",
+        "default": "false"
+      },
+      {
+        "name": "readonly",
+        "type": "Boolean",
+        "default": "false"
+      },
+      {
+        "name": "name",
+        "type": "String",
+        "default": "none"
+      },
+      {
+        "name": "autocomplete",
+        "type": "String",
+        "default": "none"
+      },
+      {
+        "name": "inputmode",
+        "type": "String",
+        "default": "none"
+      },
+      {
+        "name": "min",
+        "type": "String, Number",
+        "default": "none"
+      },
+      {
+        "name": "max",
+        "type": "String, Number",
+        "default": "none"
+      },
+      {
+        "name": "step",
+        "type": "String, Number",
+        "default": "none"
+      },
+      {
+        "name": "minlength",
+        "type": "Number",
+        "default": "none"
+      },
+      {
+        "name": "maxlength",
+        "type": "Number",
+        "default": "none"
+      },
+      {
+        "name": "pattern",
+        "type": "String",
+        "default": "none"
+      },
+      {
+        "name": "multiple",
+        "type": "Boolean",
+        "default": "false"
+      },
+      {
+        "name": "accept",
+        "type": "String",
+        "default": "none"
+      },
+      {
+        "name": "capture",
+        "type": "String",
+        "default": "none"
+      },
+      {
+        "name": "list",
+        "type": "String",
+        "default": "none"
+      },
+      {
+        "name": "checkedValue",
+        "type": "String",
+        "default": "'on'"
+      },
+      {
+        "name": "size",
+        "type": "Number",
+        "default": "none"
+      },
+      {
+        "name": "autofocus",
+        "type": "Boolean",
+        "default": "false"
+      },
+      {
+        "name": "spellcheck",
+        "type": "Boolean, String",
+        "default": "none"
+      },
+      {
+        "name": "enterkeyhint",
+        "type": "String",
+        "default": "none"
+      },
+      {
+        "name": "src",
+        "type": "String",
+        "default": "none"
+      },
+      {
+        "name": "alt",
+        "type": "String",
+        "default": "none"
+      },
+      {
+        "name": "width",
+        "type": "Number",
+        "default": "none"
+      },
+      {
+        "name": "height",
+        "type": "Number",
+        "default": "none"
+      },
+      {
+        "name": "form",
+        "type": "String",
+        "default": "none"
+      },
+      {
+        "name": "formaction",
+        "type": "String",
+        "default": "none"
+      },
+      {
+        "name": "formenctype",
+        "type": "String",
+        "default": "none"
+      },
+      {
+        "name": "formmethod",
+        "type": "String",
+        "default": "none"
+      },
+      {
+        "name": "formnovalidate",
+        "type": "Boolean",
+        "default": "false"
+      },
+      {
+        "name": "formtarget",
+        "type": "String",
+        "default": "none"
+      },
+      {
+        "name": "dirname",
+        "type": "String",
+        "default": "none"
+      }
+    ],
+    "events": [
+      "update:modelValue"
+    ],
+    "exampleVue": "<sf-input v-model=\"email\" label=\"Email address\"\n  type=\"email\" icon=\"mail\" placeholder=\"you@studio.co\" />",
+    "importVue": "import { SfInput } from '@bclonan/softform';",
+    "importElement": "import { registerSfInput } from '@bclonan/softform/elements/SfInput';",
+    "motion": "Focus, hint, error, and filled state change without moving the caret.",
+    "demo": {
+      "props": {
+        "modelValue": "",
+        "type": "text",
+        "disabled": false,
+        "label": "Email address",
+        "placeholder": "you@example.com"
+      },
+      "slot": ""
+    }
+  },
+  "SfListCard": {
+    "name": "SfListCard",
+    "tag": "sf-list-card",
+    "category": "Data",
+    "purpose": "A compact row-based card for calls, contacts, tasks, or recent items. Emits the selected row.",
+    "whenToUse": "Use for a short actionable list with an icon and small detail per row.",
+    "avoidWhen": "Use SfTable for sortable multi-column records.",
+    "props": [
+      {
+        "name": "title",
+        "type": "String",
+        "default": "'Recent calls'"
+      },
+      {
+        "name": "items",
+        "type": "Array",
+        "default": "none"
+      }
+    ],
+    "events": [
+      "select"
+    ],
+    "exampleVue": "<sf-list-card title=\"Recent calls\" :items=\"calls\"\n  @select=\"openCall\" />",
+    "importVue": "import { SfListCard } from '@bclonan/softform';",
+    "importElement": "import { registerSfListCard } from '@bclonan/softform/elements/SfListCard';",
+    "motion": "Value or highlight changes use short transitions.",
+    "demo": {
+      "props": {
+        "title": "Recent calls"
+      },
+      "slot": ""
+    }
+  },
+  "SfMediaPlayer": {
+    "name": "SfMediaPlayer",
+    "tag": "sf-media-player",
+    "category": "Media",
+    "purpose": "A working native audio element with custom controls. The demo includes an original 12-second synthesized WAV.",
+    "whenToUse": "Use for local or supplied audio with play, mute, and seek controls.",
+    "avoidWhen": "Do not assume that a source can autoplay.",
+    "props": [
+      {
+        "name": "src",
+        "type": "String",
+        "default": "none"
+      },
+      {
+        "name": "title",
+        "type": "String",
+        "default": "'Ceramic'"
+      },
+      {
+        "name": "subtitle",
+        "type": "String",
+        "default": "'An original synthesized loop'"
+      }
+    ],
+    "events": [],
+    "exampleVue": "<sf-media-player title=\"Ceramic\" :src=\"audioUrl\"\n  subtitle=\"An original synthesized loop\" />",
+    "importVue": "import { SfMediaPlayer } from '@bclonan/softform';",
+    "importElement": "import { registerSfMediaPlayer } from '@bclonan/softform/elements/SfMediaPlayer';",
+    "motion": "Playback controls respond to press and state changes.",
+    "demo": {
+      "props": {
+        "title": "Ceramic",
+        "subtitle": "An original synthesized loop"
+      },
+      "slot": ""
+    }
+  },
+  "SfMetricPanel": {
+    "name": "SfMetricPanel",
+    "tag": "sf-metric-panel",
+    "category": "Data",
+    "purpose": "A dense dashboard module combining a total, two counters, and a compact activity chart.",
+    "whenToUse": "Use to combine a total, two related counts, and recent activity.",
+    "avoidWhen": "Use SfStatCard for one isolated metric.",
+    "props": [
+      {
+        "name": "title",
+        "type": "String",
+        "default": "'Messages'"
+      },
+      {
+        "name": "total",
+        "type": "Number",
+        "default": "84"
+      },
+      {
+        "name": "primary",
+        "type": "Number",
+        "default": "63"
+      },
+      {
+        "name": "secondary",
+        "type": "Number",
+        "default": "21"
+      },
+      {
+        "name": "loading",
+        "type": "Boolean",
+        "default": "false"
+      },
+      {
+        "name": "motionDelay",
+        "type": "Number",
+        "default": "0"
+      },
+      {
+        "name": "motionDuration",
+        "type": "Number",
+        "default": "650"
+      },
+      {
+        "name": "stagger",
+        "type": "Number",
+        "default": "80"
+      },
+      {
+        "name": "animateOnMount",
+        "type": "Boolean",
+        "default": "true"
+      }
+    ],
+    "events": [],
+    "exampleVue": "<sf-metric-panel title=\"Messages\" :total=\"84\"\n  :primary=\"63\" :secondary=\"21\" />",
+    "importVue": "import { SfMetricPanel } from '@bclonan/softform';",
+    "importElement": "import { registerSfMetricPanel } from '@bclonan/softform/elements/SfMetricPanel';",
+    "motion": "Counters and the embedded bar chart use motionDelay, motionDuration, and stagger.",
+    "demo": {
+      "props": {
+        "title": "Messages",
+        "total": 84,
+        "primary": 63,
+        "secondary": 21,
+        "loading": false,
+        "motionDelay": 150,
+        "motionDuration": 760,
+        "stagger": 90,
+        "animateOnMount": true
+      },
+      "slot": ""
+    }
+  },
+  "SfMixer": {
+    "name": "SfMixer",
+    "tag": "sf-mixer",
+    "category": "Input",
+    "purpose": "Four native vertical sliders. Changes emit a copied channel array; application audio routing is intentionally separate.",
+    "whenToUse": "Use to adjust several related audio levels together.",
+    "avoidWhen": "Use SfSlider for one value.",
+    "props": [
+      {
+        "name": "modelValue",
+        "type": "Array",
+        "default": "none"
+      },
+      {
+        "name": "labels",
+        "type": "Array",
+        "default": "none"
+      },
+      {
+        "name": "title",
+        "type": "String",
+        "default": "'Sound levels'"
+      }
+    ],
+    "events": [
+      "update:modelValue"
+    ],
+    "exampleVue": "<sf-mixer v-model=\"channels\"\n  :labels=\"[\\'Voice\\',\\'Ambient\\',\\'Alerts\\',\\'Master\\']\" />",
+    "importVue": "import { SfMixer } from '@bclonan/softform';",
+    "importElement": "import { registerSfMixer } from '@bclonan/softform/elements/SfMixer';",
+    "motion": "Selection and focus states use short transitions.",
+    "demo": {
+      "props": {
+        "title": "Sound levels"
+      },
+      "slot": ""
+    }
+  },
+  "SfModal": {
+    "name": "SfModal",
+    "tag": "sf-modal",
+    "category": "Overlay",
+    "purpose": "A native modal dialog with Escape, focus containment, focus restoration, and optional footer content.",
+    "whenToUse": "Use for a focused decision or short form that needs modal focus handling.",
+    "avoidWhen": "Do not place a long browsing flow inside a modal.",
+    "props": [
+      {
+        "name": "modelValue",
+        "type": "Boolean",
+        "default": "false"
+      },
+      {
+        "name": "title",
+        "type": "String",
+        "default": "'A moment of clarity'"
+      },
+      {
+        "name": "code",
+        "type": "Boolean",
+        "default": "false"
+      }
+    ],
+    "events": [
+      "update:modelValue"
+    ],
+    "exampleVue": "<sf-modal v-model=\"open\" title=\"Create workspace\">\n  <p>Your new space starts here.</p>\n  <template #footer>\n    <sf-button @click=\"open = false\">Done</sf-button>\n  </template>\n</sf-modal>",
+    "importVue": "import { SfModal } from '@bclonan/softform';",
+    "importElement": "import { registerSfModal } from '@bclonan/softform/elements/SfModal';",
+    "motion": "The dialog and backdrop enter and leave with reduced-motion support.",
+    "demo": {
+      "props": {
+        "modelValue": true,
+        "title": "A moment of clarity",
+        "code": false
+      },
+      "slot": "Dialog content"
+    }
+  },
+  "SfNavList": {
+    "name": "SfNavList",
+    "tag": "sf-nav-list",
+    "category": "Navigation",
+    "purpose": "A ceramic side menu with icons, counts, and a current-page marker.",
+    "whenToUse": "Use for a small vertical group of destinations or sections.",
+    "avoidWhen": "Do not use for arbitrary action buttons.",
+    "props": [
+      {
+        "name": "modelValue",
+        "type": "String",
+        "default": "none"
+      },
+      {
+        "name": "items",
+        "type": "Array",
+        "default": "none"
+      },
+      {
+        "name": "label",
+        "type": "String",
+        "default": "'Main navigation'"
+      },
+      {
+        "name": "motion",
+        "type": "Boolean",
+        "default": "true"
+      },
+      {
+        "name": "motionDelay",
+        "type": "Number",
+        "default": "0"
+      },
+      {
+        "name": "motionDuration",
+        "type": "Number",
+        "default": "360"
+      },
+      {
+        "name": "motionEasing",
+        "type": "String",
+        "default": "'cubic-bezier(.2,.8,.2,1)'"
+      }
+    ],
+    "events": [
+      "update:modelValue"
+    ],
+    "exampleVue": "<sf-nav-list v-model=\"section\" :items=\"navigation\" />",
+    "importVue": "import { SfNavList } from '@bclonan/softform';",
+    "importElement": "import { registerSfNavList } from '@bclonan/softform/elements/SfNavList';",
+    "motion": "The selected row fills from the previous destination; motion, delay, duration, and easing are configurable.",
+    "demo": {
+      "props": {
+        "label": "Main navigation",
+        "modelValue": "home",
+        "items": [
+          {
+            "label": "Home",
+            "value": "home",
+            "icon": "home"
+          },
+          {
+            "label": "Inbox",
+            "value": "inbox",
+            "icon": "inbox"
+          }
+        ],
+        "motion": true,
+        "motionDelay": 0,
+        "motionDuration": 420,
+        "motionEasing": "cubic-bezier(.2,.8,.2,1)"
+      },
+      "slot": ""
+    }
+  },
+  "SfNotification": {
+    "name": "SfNotification",
+    "tag": "sf-notification",
+    "category": "Data",
+    "purpose": "A small content card with stable presentation props. It knows nothing about REST, GraphQL, or legacy payloads.",
+    "whenToUse": "Use to show one message, call, or status update with sender and action.",
+    "avoidWhen": "Use SfAdaptedCards to normalize a collection from a provider.",
+    "props": [
+      {
+        "name": "title",
+        "type": "String",
+        "default": "'Design review'"
+      },
+      {
+        "name": "body",
+        "type": "String",
+        "default": "'Your new component library is ready to explore.'"
+      },
+      {
+        "name": "sender",
+        "type": "String",
+        "default": "'Maya Chen'"
+      },
+      {
+        "name": "time",
+        "type": "String",
+        "default": "'09:41'"
+      },
+      {
+        "name": "icon",
+        "type": "String",
+        "default": "'mail'"
+      },
+      {
+        "name": "count",
+        "type": "Number",
+        "default": "0"
+      },
+      {
+        "name": "action",
+        "type": "String",
+        "default": "'Open'"
+      }
+    ],
+    "events": [
+      "action"
+    ],
+    "exampleVue": "<sf-notification title=\"Design review\" sender=\"Maya Chen\"\n  body=\"The new surfaces are ready.\" time=\"09:41\"\n  :count=\"4\" icon=\"mail\" @action=\"openMessage\" />",
+    "importVue": "import { SfNotification } from '@bclonan/softform';",
+    "importElement": "import { registerSfNotification } from '@bclonan/softform/elements/SfNotification';",
+    "motion": "Value or highlight changes use short transitions.",
+    "demo": {
+      "props": {
+        "title": "Design review",
+        "body": "Your new component library is ready to explore.",
+        "sender": "Maya Chen",
+        "time": "09:41",
+        "icon": "mail",
+        "count": 0,
+        "action": "Open"
+      },
+      "slot": ""
+    }
+  },
+  "SfPagination": {
+    "name": "SfPagination",
+    "tag": "sf-pagination",
+    "category": "Navigation",
+    "purpose": "A controlled page selector with bounded previous and next actions.",
+    "whenToUse": "Use to move through known pages of a collection.",
+    "avoidWhen": "Do not use when total pages are unknown.",
+    "props": [
+      {
+        "name": "modelValue",
+        "type": "Number",
+        "default": "1"
+      },
+      {
+        "name": "pages",
+        "type": "Number",
+        "default": "4"
+      },
+      {
+        "name": "motion",
+        "type": "Boolean",
+        "default": "true"
+      },
+      {
+        "name": "motionDelay",
+        "type": "Number",
+        "default": "0"
+      },
+      {
+        "name": "motionDuration",
+        "type": "Number",
+        "default": "360"
+      },
+      {
+        "name": "motionEasing",
+        "type": "String",
+        "default": "'cubic-bezier(.2,.8,.2,1)'"
+      }
+    ],
+    "events": [
+      "update:modelValue"
+    ],
+    "exampleVue": "<sf-pagination v-model=\"page\" :pages=\"4\" />",
+    "importVue": "import { SfPagination } from '@bclonan/softform';",
+    "importElement": "import { registerSfPagination } from '@bclonan/softform/elements/SfPagination';",
+    "motion": "The current page fills from the previous page; motion, delay, duration, and easing are configurable.",
+    "demo": {
+      "props": {
+        "modelValue": 1,
+        "pages": 4,
+        "motion": true,
+        "motionDelay": 0,
+        "motionDuration": 420,
+        "motionEasing": "cubic-bezier(.2,.8,.2,1)"
+      },
+      "slot": ""
+    }
+  },
+  "SfProfileCard": {
+    "name": "SfProfileCard",
+    "tag": "sf-profile-card",
+    "category": "Identity",
+    "purpose": "A reusable profile composition with initials, status, role, and an action affordance.",
+    "whenToUse": "Use to summarize one person, role, and availability.",
+    "avoidWhen": "Do not use for a full editable profile form.",
+    "props": [
+      {
+        "name": "name",
+        "type": "String",
+        "default": "'Brad Morgan'"
+      },
+      {
+        "name": "role",
+        "type": "String",
+        "default": "'Product designer'"
+      },
+      {
+        "name": "initials",
+        "type": "String",
+        "default": "'AM'"
+      },
+      {
+        "name": "status",
+        "type": "String",
+        "default": "'Available for ideas'"
+      }
+    ],
+    "events": [
+      "action"
+    ],
+    "exampleVue": "<sf-profile-card name=\"Brad Morgan\" initials=\"AM\"\n  role=\"Product designer\" @action=\"openProfile\" />",
+    "importVue": "import { SfProfileCard } from '@bclonan/softform';",
+    "importElement": "import { registerSfProfileCard } from '@bclonan/softform/elements/SfProfileCard';",
+    "motion": "Appearance follows surrounding state changes.",
+    "demo": {
+      "props": {
+        "name": "Brad Morgan",
+        "role": "Product designer",
+        "initials": "AM",
+        "status": "Available for ideas"
+      },
+      "slot": ""
+    }
+  },
+  "SfProgress": {
+    "name": "SfProgress",
+    "tag": "sf-progress",
+    "category": "Feedback",
+    "purpose": "A native progress element with a label and numeric output. Values represent real state supplied by the host.",
+    "whenToUse": "Use when task completion can be expressed as a percentage.",
+    "avoidWhen": "Use SfSpinner when progress cannot be measured.",
+    "props": [
+      {
+        "name": "value",
+        "type": "Number",
+        "default": "68"
+      },
+      {
+        "name": "label",
+        "type": "String",
+        "default": "'Workspace sync'"
+      },
+      {
+        "name": "tone",
+        "type": "String",
+        "default": "none"
+      },
+      {
+        "name": "loading",
+        "type": "Boolean",
+        "default": "false"
+      },
+      {
+        "name": "motionDelay",
+        "type": "Number",
+        "default": "0"
+      },
+      {
+        "name": "motionDuration",
+        "type": "Number",
+        "default": "650"
+      },
+      {
+        "name": "animateOnMount",
+        "type": "Boolean",
+        "default": "true"
+      }
+    ],
+    "events": [],
+    "exampleVue": "<sf-progress :value=\"progress\"\n  label=\"Processing components\" />",
+    "importVue": "import { SfProgress } from '@bclonan/softform';",
+    "importElement": "import { registerSfProgress } from '@bclonan/softform/elements/SfProgress';",
+    "motion": "The native progress value and label count toward the supplied percentage after motionDelay.",
+    "demo": {
+      "props": {
+        "value": 68,
+        "label": "Workspace sync",
+        "loading": false,
+        "motionDelay": 150,
+        "motionDuration": 760,
+        "animateOnMount": true
+      },
+      "slot": ""
+    }
+  },
+  "SfRadioGroup": {
+    "name": "SfRadioGroup",
+    "tag": "sf-radio-group",
+    "category": "Input",
+    "purpose": "Mutually exclusive native inputs with fieldset and legend semantics.",
+    "whenToUse": "Use for one choice among a labeled set of options.",
+    "avoidWhen": "Use SfSelect if the list is long and space is limited.",
+    "props": [
+      {
+        "name": "modelValue",
+        "type": "String",
+        "default": "none"
+      },
+      {
+        "name": "label",
+        "type": "String",
+        "default": "none"
+      },
+      {
+        "name": "options",
+        "type": "Array",
+        "default": "none"
+      }
+    ],
+    "events": [
+      "update:modelValue"
+    ],
+    "exampleVue": "<sf-radio-group v-model=\"plan\" label=\"Your plan\"\n  :options=\"plans\" />",
+    "importVue": "import { SfRadioGroup } from '@bclonan/softform';",
+    "importElement": "import { registerSfRadioGroup } from '@bclonan/softform/elements/SfRadioGroup';",
+    "motion": "Selection and focus states use short transitions.",
+    "demo": {
+      "props": {
+        "label": "Plan",
+        "modelValue": "team",
+        "options": [
+          {
+            "label": "Solo",
+            "value": "solo"
+          },
+          {
+            "label": "Team",
+            "value": "team"
+          }
+        ]
+      },
+      "slot": ""
+    }
+  },
+  "SfRating": {
+    "name": "SfRating",
+    "tag": "sf-rating",
+    "category": "Input",
+    "purpose": "Keyboard-operable star selection with radio semantics. Arrow keys, Home, and End are supported.",
+    "whenToUse": "Use for a small ordered rating that supports keyboard selection.",
+    "avoidWhen": "Do not use for a precise numeric measurement.",
+    "props": [
+      {
+        "name": "modelValue",
+        "type": "Number",
+        "default": "4"
+      },
+      {
+        "name": "max",
+        "type": "Number",
+        "default": "5"
+      },
+      {
+        "name": "label",
+        "type": "String",
+        "default": "'Rating'"
+      }
+    ],
+    "events": [
+      "update:modelValue"
+    ],
+    "exampleVue": "<sf-rating v-model=\"rating\" :max=\"5\"\n  label=\"Rate this library\" />",
+    "importVue": "import { SfRating } from '@bclonan/softform';",
+    "importElement": "import { registerSfRating } from '@bclonan/softform/elements/SfRating';",
+    "motion": "Selection and focus states use short transitions.",
+    "demo": {
+      "props": {
+        "modelValue": 4,
+        "max": 5,
+        "label": "Rating"
+      },
+      "slot": ""
+    }
+  },
+  "SfSegmented": {
+    "name": "SfSegmented",
+    "tag": "sf-segmented",
+    "category": "Input",
+    "purpose": "A native radio group in an inset tray. Use for view modes or mutually exclusive settings.",
+    "whenToUse": "Use for a few short view or filter modes with one active choice.",
+    "avoidWhen": "Use SfTabs when each choice owns a content panel.",
+    "props": [
+      {
+        "name": "modelValue",
+        "type": "String",
+        "default": "none"
+      },
+      {
+        "name": "options",
+        "type": "Array",
+        "default": "none"
+      },
+      {
+        "name": "label",
+        "type": "String",
+        "default": "'View'"
+      },
+      {
+        "name": "motion",
+        "type": "Boolean",
+        "default": "true"
+      },
+      {
+        "name": "motionDelay",
+        "type": "Number",
+        "default": "0"
+      },
+      {
+        "name": "motionDuration",
+        "type": "Number",
+        "default": "360"
+      },
+      {
+        "name": "motionEasing",
+        "type": "String",
+        "default": "'cubic-bezier(.2,.8,.2,1)'"
+      }
+    ],
+    "events": [
+      "update:modelValue"
+    ],
+    "exampleVue": "<sf-segmented v-model=\"view\"\n  label=\"View mode\" :options=\"views\" />",
+    "importVue": "import { SfSegmented } from '@bclonan/softform';",
+    "importElement": "import { registerSfSegmented } from '@bclonan/softform/elements/SfSegmented';",
+    "motion": "The checked segment fills from the previous option; motion, delay, duration, and easing are configurable.",
+    "demo": {
+      "props": {
+        "label": "View",
+        "modelValue": "week",
+        "options": [
+          {
+            "label": "Week",
+            "value": "week"
+          },
+          {
+            "label": "Month",
+            "value": "month"
+          }
+        ],
+        "motion": true,
+        "motionDelay": 0,
+        "motionDuration": 420,
+        "motionEasing": "cubic-bezier(.2,.8,.2,1)"
+      },
+      "slot": ""
+    }
+  },
+  "SfSelect": {
+    "name": "SfSelect",
+    "tag": "sf-select",
+    "category": "Input",
+    "purpose": "A native select preserves operating-system pickers and keyboard behavior.",
+    "whenToUse": "Use a native picker for a compact list of options.",
+    "avoidWhen": "Use SfRadioGroup when every option should stay visible.",
+    "props": [
+      {
+        "name": "modelValue",
+        "type": "String",
+        "default": "none"
+      },
+      {
+        "name": "label",
+        "type": "String",
+        "default": "none"
+      },
+      {
+        "name": "options",
+        "type": "Array",
+        "default": "none"
+      }
+    ],
+    "events": [
+      "update:modelValue"
+    ],
+    "exampleVue": "<sf-select v-model=\"workspace\"\n  label=\"Workspace\" :options=\"workspaces\" />",
+    "importVue": "import { SfSelect } from '@bclonan/softform';",
+    "importElement": "import { registerSfSelect } from '@bclonan/softform/elements/SfSelect';",
+    "motion": "Selection and focus states use short transitions.",
+    "demo": {
+      "props": {
+        "label": "Workspace",
+        "modelValue": "studio",
+        "options": [
+          {
+            "label": "Studio",
+            "value": "studio"
+          },
+          {
+            "label": "Home",
+            "value": "home"
+          }
+        ]
+      },
+      "slot": ""
+    }
+  },
+  "SfSkeleton": {
+    "name": "SfSkeleton",
+    "tag": "sf-skeleton",
+    "category": "Feedback",
+    "purpose": "A loading placeholder, with reduced-motion support and a status label.",
+    "whenToUse": "Use to reserve the shape of content during a pending load.",
+    "avoidWhen": "Do not use it after an empty response is known.",
+    "props": [
+      {
+        "name": "kind",
+        "type": "String",
+        "default": "'card'"
+      }
+    ],
+    "events": [],
+    "exampleVue": "<sf-skeleton kind=\"card\" />",
+    "importVue": "import { SfSkeleton } from '@bclonan/softform';",
+    "importElement": "import { registerSfSkeleton } from '@bclonan/softform/elements/SfSkeleton';",
+    "motion": "A low-contrast shimmer indicates pending content.",
+    "demo": {
+      "props": {
+        "kind": "card"
+      },
+      "slot": ""
+    }
+  },
+  "SfSlider": {
+    "name": "SfSlider",
+    "tag": "sf-slider",
+    "category": "Input",
+    "purpose": "A native range input with output, limits, units, and optional end labels.",
+    "whenToUse": "Use for an adjustable bounded number with a visible value.",
+    "avoidWhen": "Use SfStepper or SfInput when exact entry is central.",
+    "props": [
+      {
+        "name": "modelValue",
+        "type": "Number",
+        "default": "50"
+      },
+      {
+        "name": "min",
+        "type": "Number",
+        "default": "0"
+      },
+      {
+        "name": "max",
+        "type": "Number",
+        "default": "100"
+      },
+      {
+        "name": "step",
+        "type": "Number",
+        "default": "1"
+      },
+      {
+        "name": "label",
+        "type": "String",
+        "default": "'Level'"
+      },
+      {
+        "name": "unit",
+        "type": "String",
+        "default": "'%'"
+      },
+      {
+        "name": "ticks",
+        "type": "Boolean",
+        "default": "true"
+      }
+    ],
+    "events": [
+      "update:modelValue"
+    ],
+    "exampleVue": "<sf-slider v-model=\"brightness\" label=\"Brightness\"\n  :min=\"0\" :max=\"100\" unit=\"%\" />",
+    "importVue": "import { SfSlider } from '@bclonan/softform';",
+    "importElement": "import { registerSfSlider } from '@bclonan/softform/elements/SfSlider';",
+    "motion": "The track and value respond while dragging.",
+    "demo": {
+      "props": {
+        "modelValue": 50,
+        "min": 0,
+        "max": 100,
+        "step": 1,
+        "label": "Level",
+        "unit": "%"
+      },
+      "slot": ""
+    }
+  },
+  "SfSpinner": {
+    "name": "SfSpinner",
+    "tag": "sf-spinner",
+    "category": "Feedback",
+    "purpose": "Small, regular, and large loading indicators. The status label can be customized.",
+    "whenToUse": "Use for an indeterminate wait inside or near an action.",
+    "avoidWhen": "Use SfProgress when completion can be measured.",
+    "props": [
+      {
+        "name": "size",
+        "type": "String",
+        "default": "none"
+      },
+      {
+        "name": "label",
+        "type": "String",
+        "default": "'Loading'"
+      }
+    ],
+    "events": [],
+    "exampleVue": "<sf-spinner size=\"large\" label=\"Preparing workspace\" />",
+    "importVue": "import { SfSpinner } from '@bclonan/softform';",
+    "importElement": "import { registerSfSpinner } from '@bclonan/softform/elements/SfSpinner';",
+    "motion": "A small rotation indicates indeterminate progress.",
+    "demo": {
+      "props": {
+        "label": "Loading"
+      },
+      "slot": ""
+    }
+  },
+  "SfStatCard": {
+    "name": "SfStatCard",
+    "tag": "sf-stat-card",
+    "category": "Data",
+    "purpose": "A large figure, label, icon, change marker, and supporting context.",
+    "whenToUse": "Use for one important metric with context and a short change label.",
+    "avoidWhen": "Use SfMetricPanel when two counts and a trend belong together.",
+    "props": [
+      {
+        "name": "label",
+        "type": "String",
+        "default": "'Messages'"
+      },
+      {
+        "name": "value",
+        "type": "String, Number",
+        "default": "128"
+      },
+      {
+        "name": "change",
+        "type": "String",
+        "default": "none"
+      },
+      {
+        "name": "description",
+        "type": "String",
+        "default": "'since last week'"
+      },
+      {
+        "name": "icon",
+        "type": "String",
+        "default": "'mail'"
+      },
+      {
+        "name": "loading",
+        "type": "Boolean",
+        "default": "false"
+      },
+      {
+        "name": "motionDelay",
+        "type": "Number",
+        "default": "0"
+      },
+      {
+        "name": "motionDuration",
+        "type": "Number",
+        "default": "650"
+      },
+      {
+        "name": "animateOnMount",
+        "type": "Boolean",
+        "default": "true"
+      }
+    ],
+    "events": [],
+    "exampleVue": "<sf-stat-card label=\"Messages\" :value=\"128\"\n  change=\"+12.8%\" description=\"since last week\" icon=\"mail\" />",
+    "importVue": "import { SfStatCard } from '@bclonan/softform';",
+    "importElement": "import { registerSfStatCard } from '@bclonan/softform/elements/SfStatCard';",
+    "motion": "Numeric values count toward the supplied value after motionDelay; strings use a short text transition.",
+    "demo": {
+      "props": {
+        "label": "Messages",
+        "value": 128,
+        "description": "since last week",
+        "icon": "mail",
+        "loading": false,
+        "motionDelay": 150,
+        "motionDuration": 760,
+        "animateOnMount": true
+      },
+      "slot": ""
+    }
+  },
+  "SfStepper": {
+    "name": "SfStepper",
+    "tag": "sf-stepper",
+    "category": "Input",
+    "purpose": "Increment, decrement, or type a numeric value. Every change is clamped to the provided limits.",
+    "whenToUse": "Use to adjust a small integer quantity within known limits.",
+    "avoidWhen": "Use SfSlider for a broad approximate range.",
+    "props": [
+      {
+        "name": "modelValue",
+        "type": "Number",
+        "default": "1"
+      },
+      {
+        "name": "min",
+        "type": "Number",
+        "default": "0"
+      },
+      {
+        "name": "max",
+        "type": "Number",
+        "default": "99"
+      },
+      {
+        "name": "label",
+        "type": "String",
+        "default": "'Quantity'"
+      }
+    ],
+    "events": [
+      "update:modelValue"
+    ],
+    "exampleVue": "<sf-stepper v-model=\"quantity\" :min=\"1\" :max=\"12\"\n  label=\"Guests\" />",
+    "importVue": "import { SfStepper } from '@bclonan/softform';",
+    "importElement": "import { registerSfStepper } from '@bclonan/softform/elements/SfStepper';",
+    "motion": "Selection and focus states use short transitions.",
+    "demo": {
+      "props": {
+        "modelValue": 1,
+        "min": 0,
+        "max": 99,
+        "label": "Quantity"
+      },
+      "slot": ""
+    }
+  },
+  "SfSurface": {
+    "name": "SfSurface",
+    "tag": "sf-surface",
+    "category": "Layout",
+    "purpose": "The shared ceramic material. Use the default raised treatment, a low elevation, a flat card, or an inset well.",
+    "whenToUse": "Use as a card, section, article, or inset well with Softform material.",
+    "avoidWhen": "Do not use it to replace a meaningful document heading.",
+    "props": [
+      {
+        "name": "as",
+        "type": "String",
+        "default": "'div'"
+      },
+      {
+        "name": "depth",
+        "type": "String",
+        "default": "'raised'"
+      },
+      {
+        "name": "tone",
+        "type": "String",
+        "default": "'light'"
+      }
+    ],
+    "events": [],
+    "exampleVue": "<sf-surface depth=\"raised\">\n  Your content\n</sf-surface>",
+    "importVue": "import { SfSurface } from '@bclonan/softform';",
+    "importElement": "import { registerSfSurface } from '@bclonan/softform/elements/SfSurface';",
+    "motion": "Elevation and tone changes use short transitions.",
+    "demo": {
+      "props": {
+        "as": "div",
+        "depth": "raised",
+        "tone": "light"
+      },
+      "slot": "Your content"
+    }
+  },
+  "SfSwitch": {
+    "name": "SfSwitch",
+    "tag": "sf-switch",
+    "category": "Input",
+    "purpose": "A native checkbox exposed as a switch. The tiny yellow thumb indicates the on state.",
+    "whenToUse": "Use for an immediate on or off setting.",
+    "avoidWhen": "Use SfCheckbox when the option is part of a later form submission.",
+    "props": [
+      {
+        "name": "modelValue",
+        "type": "Boolean",
+        "default": "false"
+      },
+      {
+        "name": "label",
+        "type": "String",
+        "default": "'Toggle'"
+      },
+      {
+        "name": "hideLabel",
+        "type": "Boolean",
+        "default": "false"
+      },
+      {
+        "name": "disabled",
+        "type": "Boolean",
+        "default": "false"
+      }
+    ],
+    "events": [
+      "update:modelValue"
+    ],
+    "exampleVue": "<sf-switch v-model=\"focusMode\" label=\"Focus mode\" />",
+    "importVue": "import { SfSwitch } from '@bclonan/softform';",
+    "importElement": "import { registerSfSwitch } from '@bclonan/softform/elements/SfSwitch';",
+    "motion": "Selection and focus states use short transitions.",
+    "demo": {
+      "props": {
+        "modelValue": true,
+        "label": "Focus mode",
+        "hideLabel": false,
+        "disabled": false
+      },
+      "slot": ""
+    }
+  },
+  "SfTable": {
+    "name": "SfTable",
+    "tag": "sf-table",
+    "category": "Data",
+    "purpose": "A semantic table with sortable column headers. Data is copied before sorting, never mutated in place.",
+    "whenToUse": "Use for multi-column records that need sorting and a caption.",
+    "avoidWhen": "Use SfListCard for a short single-line list.",
+    "props": [
+      {
+        "name": "columns",
+        "type": "Array",
+        "default": "none"
+      },
+      {
+        "name": "rows",
+        "type": "Array",
+        "default": "none"
+      },
+      {
+        "name": "caption",
+        "type": "String",
+        "default": "'Recent activity'"
+      },
+      {
+        "name": "view",
+        "type": "String",
+        "default": "'table'"
+      },
+      {
+        "name": "searchable",
+        "type": "Boolean",
+        "default": "false"
+      },
+      {
+        "name": "searchPlaceholder",
+        "type": "String",
+        "default": "'Search records'"
+      },
+      {
+        "name": "pageSize",
+        "type": "Number",
+        "default": "0"
+      },
+      {
+        "name": "loading",
+        "type": "Boolean",
+        "default": "false"
+      },
+      {
+        "name": "emptyText",
+        "type": "String",
+        "default": "'No records yet.'"
+      },
+      {
+        "name": "rowKey",
+        "type": "String",
+        "default": "'id'"
+      },
+      {
+        "name": "compact",
+        "type": "Boolean",
+        "default": "false"
+      }
+    ],
+    "events": [],
+    "exampleVue": "<sf-table :columns=\"columns\" :rows=\"rows\"\n  caption=\"Recent activity\" />",
+    "importVue": "import { SfTable } from '@bclonan/softform';",
+    "importElement": "import { registerSfTable } from '@bclonan/softform/elements/SfTable';",
+    "motion": "Search, sorting, paging, and table or card views respond to the supplied rows.",
+    "demo": {
+      "props": {
+        "caption": "Projects",
+        "columns": [
+          {
+            "key": "name",
+            "label": "Name"
+          },
+          {
+            "key": "status",
+            "label": "Status",
+            "badge": true
+          }
+        ],
+        "rows": [
+          {
+            "id": 1,
+            "name": "Softform",
+            "status": "Active"
+          },
+          {
+            "id": 2,
+            "name": "Release notes",
+            "status": "Draft"
+          }
+        ],
+        "view": "table",
+        "searchable": true,
+        "pageSize": 0,
+        "loading": false,
+        "compact": false
+      },
+      "slot": ""
+    }
+  },
+  "SfTabs": {
+    "name": "SfTabs",
+    "tag": "sf-tabs",
+    "category": "Navigation",
+    "purpose": "A controlled tablist with roving focus, linked tab panel, and directional keyboard navigation.",
+    "whenToUse": "Use when one of several labeled panels is visible at a time.",
+    "avoidWhen": "Use SfSegmented for a short filter that does not own a panel.",
+    "props": [
+      {
+        "name": "modelValue",
+        "type": "String",
+        "default": "none"
+      },
+      {
+        "name": "options",
+        "type": "Array",
+        "default": "none"
+      },
+      {
+        "name": "label",
+        "type": "String",
+        "default": "'Tabs'"
+      },
+      {
+        "name": "motion",
+        "type": "Boolean",
+        "default": "true"
+      },
+      {
+        "name": "motionDelay",
+        "type": "Number",
+        "default": "0"
+      },
+      {
+        "name": "motionDuration",
+        "type": "Number",
+        "default": "360"
+      },
+      {
+        "name": "motionEasing",
+        "type": "String",
+        "default": "'cubic-bezier(.2,.8,.2,1)'"
+      }
+    ],
+    "events": [
+      "update:modelValue"
+    ],
+    "exampleVue": "<sf-tabs v-model=\"activeTab\" :options=\"tabs\">\n  <p>{{ content[activeTab] }}</p>\n</sf-tabs>",
+    "importVue": "import { SfTabs } from '@bclonan/softform';",
+    "importElement": "import { registerSfTabs } from '@bclonan/softform/elements/SfTabs';",
+    "motion": "The active tab and panel change with a short transition.",
+    "demo": {
+      "props": {
+        "label": "Tabs",
+        "modelValue": "overview",
+        "options": [
+          {
+            "label": "Overview",
+            "value": "overview"
+          },
+          {
+            "label": "Activity",
+            "value": "activity"
+          }
+        ],
+        "motion": true,
+        "motionDelay": 0,
+        "motionDuration": 420,
+        "motionEasing": "cubic-bezier(.2,.8,.2,1)"
+      },
+      "slot": "Tab content"
+    }
+  },
+  "SfTextarea": {
+    "name": "SfTextarea",
+    "tag": "sf-textarea",
+    "category": "Input",
+    "purpose": "A controlled native textarea with a live character count and maximum length.",
+    "whenToUse": "Use for multi-line writing with a character limit.",
+    "avoidWhen": "Use SfInput for one-line values.",
+    "props": [
+      {
+        "name": "modelValue",
+        "type": "String",
+        "default": "''"
+      },
+      {
+        "name": "label",
+        "type": "String",
+        "default": "none"
+      },
+      {
+        "name": "placeholder",
+        "type": "String",
+        "default": "none"
+      },
+      {
+        "name": "maxlength",
+        "type": "Number",
+        "default": "240"
+      }
+    ],
+    "events": [
+      "update:modelValue"
+    ],
+    "exampleVue": "<sf-textarea v-model=\"notes\" label=\"Workspace notes\"\n  :maxlength=\"240\" />",
+    "importVue": "import { SfTextarea } from '@bclonan/softform';",
+    "importElement": "import { registerSfTextarea } from '@bclonan/softform/elements/SfTextarea';",
+    "motion": "Focus and character-count feedback change while typing.",
+    "demo": {
+      "props": {
+        "modelValue": "A clear note for the team.",
+        "maxlength": 240,
+        "label": "Notes"
+      },
+      "slot": ""
+    }
+  },
+  "SfTimeline": {
+    "name": "SfTimeline",
+    "tag": "sf-timeline",
+    "category": "Data",
+    "purpose": "An ordered activity list with connectors, descriptions, and times.",
+    "whenToUse": "Use for events whose order and time are meaningful.",
+    "avoidWhen": "Use SfListCard when the entries are actions without chronology.",
+    "props": [
+      {
+        "name": "items",
+        "type": "Array",
+        "default": "none"
+      }
+    ],
+    "events": [],
+    "exampleVue": "<sf-timeline :items=\"activityEvents\" />",
+    "importVue": "import { SfTimeline } from '@bclonan/softform';",
+    "importElement": "import { registerSfTimeline } from '@bclonan/softform/elements/SfTimeline';",
+    "motion": "Value or highlight changes use short transitions.",
+    "demo": {
+      "props": {
+        "items": [
+          {
+            "title": "Review complete",
+            "description": "Maya approved the layout.",
+            "time": "09:41"
+          },
+          {
+            "title": "Draft created",
+            "description": "A new draft is ready.",
+            "time": "Yesterday"
+          }
+        ]
+      },
+      "slot": ""
+    }
+  },
+  "SfToast": {
+    "name": "SfToast",
+    "tag": "sf-toast",
+    "category": "Feedback",
+    "purpose": "A compact live status message with an optional dismiss action. Placement and timing belong to the host app.",
+    "whenToUse": "Use for brief confirmation of a completed local action.",
+    "avoidWhen": "Use SfAlert for persistent errors or guidance.",
+    "props": [
+      {
+        "name": "as",
+        "type": "String",
+        "default": "'div'"
+      },
+      {
+        "name": "message",
+        "type": "String",
+        "default": "'Changes saved to your workspace.'"
+      },
+      {
+        "name": "dismissible",
+        "type": "Boolean",
+        "default": "true"
+      }
+    ],
+    "events": [
+      "dismiss"
+    ],
+    "exampleVue": "<sf-toast message=\"Workspace saved.\"\n  @dismiss=\"visible = false\" />",
+    "importVue": "import { SfToast } from '@bclonan/softform';",
+    "importElement": "import { registerSfToast } from '@bclonan/softform/elements/SfToast';",
+    "motion": "Visibility and status changes use short transitions.",
+    "demo": {
+      "props": {
+        "as": "div",
+        "message": "Changes saved to your workspace."
+      },
+      "slot": ""
+    }
+  },
+  "SfTooltip": {
+    "name": "SfTooltip",
+    "tag": "sf-tooltip",
+    "category": "Feedback",
+    "purpose": "A hint shown on hover or focus. The slot receives its tooltip id to attach with aria-describedby.",
+    "whenToUse": "Use to explain a compact control on hover or focus.",
+    "avoidWhen": "Do not hide essential instructions in a tooltip.",
+    "props": [
+      {
+        "name": "text",
+        "type": "String",
+        "default": "required"
+      }
+    ],
+    "events": [],
+    "exampleVue": "<sf-tooltip text=\"Saved to your collection\" v-slot=\"{ describedby }\">\n  <sf-icon-button icon=\"heart\" label=\"Save item\"\n    :aria-describedby=\"describedby\" />\n</sf-tooltip>",
+    "importVue": "import { SfTooltip } from '@bclonan/softform';",
+    "importElement": "import { registerSfTooltip } from '@bclonan/softform/elements/SfTooltip';",
+    "motion": "Visibility and status changes use short transitions.",
+    "demo": {
+      "props": {
+        "text": "This control opens more detail."
+      },
+      "slot": "Hover for detail"
+    }
+  },
+  "SfWorkflow": {
+    "name": "SfWorkflow",
+    "tag": "sf-workflow",
+    "category": "Data",
+    "purpose": "A set of physical-looking nodes joined by hairlines. Selection is controlled by the parent.",
+    "whenToUse": "Use to show a short sequence of connected stages and the active stage.",
+    "avoidWhen": "Do not use it for a large editable flowchart.",
+    "props": [
+      {
+        "name": "modelValue",
+        "type": "String",
+        "default": "'adapt'"
+      },
+      {
+        "name": "nodes",
+        "type": "Array",
+        "default": "none"
+      }
+    ],
+    "events": [
+      "update:modelValue"
+    ],
+    "exampleVue": "<sf-workflow v-model=\"selectedNode\" :nodes=\"nodes\" />",
+    "importVue": "import { SfWorkflow } from '@bclonan/softform';",
+    "importElement": "import { registerSfWorkflow } from '@bclonan/softform/elements/SfWorkflow';",
+    "motion": "Value or highlight changes use short transitions.",
+    "demo": {
+      "props": {
+        "modelValue": "adapt"
+      },
+      "slot": ""
+    }
+  }
+}

@@ -1,0 +1,2051 @@
+{
+  "@softform/vue": {
+    "id": "@softform/vue@1.3.0",
+    "name": "@softform/vue",
+    "version": "1.3.0",
+    "size": 531823,
+    "unpackedSize": 1285056,
+    "shasum": "b0a8a6a373168a94bcc2d737af1c4acde508a807",
+    "integrity": "sha512-o6cjBoYiGmFFZU6FxcN9C1O6dGlIu/njtSkY4FzVtJNhhjOEt2WG+52LhVWWjP8+SXV1VU0gsSilrVuahdbyNw==",
+    "filename": "softform-vue-1.3.0.tgz",
+    "files": [
+      {
+        "path": "LICENSE",
+        "size": 1078,
+        "mode": 420
+      },
+      {
+        "path": "README.md",
+        "size": 3364,
+        "mode": 420
+      },
+      {
+        "path": "dist/_plugin-vue_export-helper-CHgC5LLL.js",
+        "size": 128,
+        "mode": 420
+      },
+      {
+        "path": "dist/adapters.d.ts",
+        "size": 1085,
+        "mode": 420
+      },
+      {
+        "path": "dist/adapters.js",
+        "size": 3471,
+        "mode": 420
+      },
+      {
+        "path": "dist/component-dictionary.json",
+        "size": 80721,
+        "mode": 420
+      },
+      {
+        "path": "dist/components/SfAccordion.d.ts",
+        "size": 199,
+        "mode": 420
+      },
+      {
+        "path": "dist/components/SfAccordion.js",
+        "size": 851,
+        "mode": 420
+      },
+      {
+        "path": "dist/components/SfAdaptedCards.d.ts",
+        "size": 363,
+        "mode": 420
+      },
+      {
+        "path": "dist/components/SfAdaptedCards.js",
+        "size": 2148,
+        "mode": 420
+      },
+      {
+        "path": "dist/components/SfAlert.d.ts",
+        "size": 235,
+        "mode": 420
+      },
+      {
+        "path": "dist/components/SfAlert.js",
+        "size": 1288,
+        "mode": 420
+      },
+      {
+        "path": "dist/components/SfAvatar.d.ts",
+        "size": 260,
+        "mode": 420
+      },
+      {
+        "path": "dist/components/SfAvatar.js",
+        "size": 887,
+        "mode": 420
+      },
+      {
+        "path": "dist/components/SfBadge.d.ts",
+        "size": 213,
+        "mode": 420
+      },
+      {
+        "path": "dist/components/SfBadge.js",
+        "size": 622,
+        "mode": 420
+      },
+      {
+        "path": "dist/components/SfBarChart.d.ts",
+        "size": 473,
+        "mode": 420
+      },
+      {
+        "path": "dist/components/SfBarChart.js",
+        "size": 5274,
+        "mode": 420
+      },
+      {
+        "path": "dist/components/SfBottomNav.d.ts",
+        "size": 323,
+        "mode": 420
+      },
+      {
+        "path": "dist/components/SfBottomNav.js",
+        "size": 1485,
+        "mode": 420
+      },
+      {
+        "path": "dist/components/SfBreadcrumbs.d.ts",
+        "size": 207,
+        "mode": 420
+      },
+      {
+        "path": "dist/components/SfBreadcrumbs.js",
+        "size": 1101,
+        "mode": 420
+      },
+      {
+        "path": "dist/components/SfButton.d.ts",
+        "size": 285,
+        "mode": 420
+      },
+      {
+        "path": "dist/components/SfButton.js",
+        "size": 1192,
+        "mode": 420
+      },
+      {
+        "path": "dist/components/SfButtonGroup.d.ts",
+        "size": 352,
+        "mode": 420
+      },
+      {
+        "path": "dist/components/SfButtonGroup.js",
+        "size": 1533,
+        "mode": 420
+      },
+      {
+        "path": "dist/components/SfCalendar.d.ts",
+        "size": 197,
+        "mode": 420
+      },
+      {
+        "path": "dist/components/SfCalendar.js",
+        "size": 4082,
+        "mode": 420
+      },
+      {
+        "path": "dist/components/SfCheckbox.d.ts",
+        "size": 240,
+        "mode": 420
+      },
+      {
+        "path": "dist/components/SfCheckbox.js",
+        "size": 780,
+        "mode": 420
+      },
+      {
+        "path": "dist/components/SfClock.d.ts",
+        "size": 180,
+        "mode": 420
+      },
+      {
+        "path": "dist/components/SfClock.js",
+        "size": 1733,
+        "mode": 420
+      },
+      {
+        "path": "dist/components/SfDial.d.ts",
+        "size": 200,
+        "mode": 420
+      },
+      {
+        "path": "dist/components/SfDial.js",
+        "size": 1479,
+        "mode": 420
+      },
+      {
+        "path": "dist/components/SfDivider.d.ts",
+        "size": 185,
+        "mode": 420
+      },
+      {
+        "path": "dist/components/SfDivider.js",
+        "size": 531,
+        "mode": 420
+      },
+      {
+        "path": "dist/components/SfDonutChart.d.ts",
+        "size": 462,
+        "mode": 420
+      },
+      {
+        "path": "dist/components/SfDonutChart.js",
+        "size": 2321,
+        "mode": 420
+      },
+      {
+        "path": "dist/components/SfDrawer.d.ts",
+        "size": 209,
+        "mode": 420
+      },
+      {
+        "path": "dist/components/SfDrawer.js",
+        "size": 1559,
+        "mode": 420
+      },
+      {
+        "path": "dist/components/SfDropdown.d.ts",
+        "size": 214,
+        "mode": 420
+      },
+      {
+        "path": "dist/components/SfDropdown.js",
+        "size": 3193,
+        "mode": 420
+      },
+      {
+        "path": "dist/components/SfElement.d.ts",
+        "size": 222,
+        "mode": 420
+      },
+      {
+        "path": "dist/components/SfElement.js",
+        "size": 487,
+        "mode": 420
+      },
+      {
+        "path": "dist/components/SfEmptyState.d.ts",
+        "size": 275,
+        "mode": 420
+      },
+      {
+        "path": "dist/components/SfEmptyState.js",
+        "size": 1485,
+        "mode": 420
+      },
+      {
+        "path": "dist/components/SfFab.d.ts",
+        "size": 190,
+        "mode": 420
+      },
+      {
+        "path": "dist/components/SfFab.js",
+        "size": 760,
+        "mode": 420
+      },
+      {
+        "path": "dist/components/SfFileUpload.d.ts",
+        "size": 220,
+        "mode": 420
+      },
+      {
+        "path": "dist/components/SfFileUpload.js",
+        "size": 2158,
+        "mode": 420
+      },
+      {
+        "path": "dist/components/SfIcon.d.ts",
+        "size": 193,
+        "mode": 420
+      },
+      {
+        "path": "dist/components/SfIcon.js",
+        "size": 503,
+        "mode": 420
+      },
+      {
+        "path": "dist/components/SfIconButton.d.ts",
+        "size": 298,
+        "mode": 420
+      },
+      {
+        "path": "dist/components/SfIconButton.js",
+        "size": 1004,
+        "mode": 420
+      },
+      {
+        "path": "dist/components/SfInput.d.ts",
+        "size": 1062,
+        "mode": 420
+      },
+      {
+        "path": "dist/components/SfInput.js",
+        "size": 4802,
+        "mode": 420
+      },
+      {
+        "path": "dist/components/SfListCard.d.ts",
+        "size": 214,
+        "mode": 420
+      },
+      {
+        "path": "dist/components/SfListCard.js",
+        "size": 1399,
+        "mode": 420
+      },
+      {
+        "path": "dist/components/SfMediaPlayer.d.ts",
+        "size": 243,
+        "mode": 420
+      },
+      {
+        "path": "dist/components/SfMediaPlayer.js",
+        "size": 260135,
+        "mode": 420
+      },
+      {
+        "path": "dist/components/SfMetricPanel.d.ts",
+        "size": 392,
+        "mode": 420
+      },
+      {
+        "path": "dist/components/SfMetricPanel.js",
+        "size": 2540,
+        "mode": 420
+      },
+      {
+        "path": "dist/components/SfMixer.d.ts",
+        "size": 230,
+        "mode": 420
+      },
+      {
+        "path": "dist/components/SfMixer.js",
+        "size": 1986,
+        "mode": 420
+      },
+      {
+        "path": "dist/components/SfModal.d.ts",
+        "size": 224,
+        "mode": 420
+      },
+      {
+        "path": "dist/components/SfModal.js",
+        "size": 1620,
+        "mode": 420
+      },
+      {
+        "path": "dist/components/SfNavList.d.ts",
+        "size": 334,
+        "mode": 420
+      },
+      {
+        "path": "dist/components/SfNavList.js",
+        "size": 1911,
+        "mode": 420
+      },
+      {
+        "path": "dist/components/SfNotification.d.ts",
+        "size": 321,
+        "mode": 420
+      },
+      {
+        "path": "dist/components/SfNotification.js",
+        "size": 2067,
+        "mode": 420
+      },
+      {
+        "path": "dist/components/SfPagination.d.ts",
+        "size": 324,
+        "mode": 420
+      },
+      {
+        "path": "dist/components/SfPagination.js",
+        "size": 1977,
+        "mode": 420
+      },
+      {
+        "path": "dist/components/SfProfileCard.d.ts",
+        "size": 263,
+        "mode": 420
+      },
+      {
+        "path": "dist/components/SfProfileCard.js",
+        "size": 1935,
+        "mode": 420
+      },
+      {
+        "path": "dist/components/SfProgress.d.ts",
+        "size": 333,
+        "mode": 420
+      },
+      {
+        "path": "dist/components/SfProgress.js",
+        "size": 1451,
+        "mode": 420
+      },
+      {
+        "path": "dist/components/SfRadioGroup.d.ts",
+        "size": 248,
+        "mode": 420
+      },
+      {
+        "path": "dist/components/SfRadioGroup.js",
+        "size": 1165,
+        "mode": 420
+      },
+      {
+        "path": "dist/components/SfRating.d.ts",
+        "size": 225,
+        "mode": 420
+      },
+      {
+        "path": "dist/components/SfRating.js",
+        "size": 1868,
+        "mode": 420
+      },
+      {
+        "path": "dist/components/SfSegmented.d.ts",
+        "size": 344,
+        "mode": 420
+      },
+      {
+        "path": "dist/components/SfSegmented.js",
+        "size": 1729,
+        "mode": 420
+      },
+      {
+        "path": "dist/components/SfSelect.d.ts",
+        "size": 232,
+        "mode": 420
+      },
+      {
+        "path": "dist/components/SfSelect.js",
+        "size": 1073,
+        "mode": 420
+      },
+      {
+        "path": "dist/components/SfSkeleton.d.ts",
+        "size": 191,
+        "mode": 420
+      },
+      {
+        "path": "dist/components/SfSkeleton.js",
+        "size": 1015,
+        "mode": 420
+      },
+      {
+        "path": "dist/components/SfSlider.d.ts",
+        "size": 298,
+        "mode": 420
+      },
+      {
+        "path": "dist/components/SfSlider.js",
+        "size": 1896,
+        "mode": 420
+      },
+      {
+        "path": "dist/components/SfSpinner.d.ts",
+        "size": 206,
+        "mode": 420
+      },
+      {
+        "path": "dist/components/SfSpinner.js",
+        "size": 512,
+        "mode": 420
+      },
+      {
+        "path": "dist/components/SfStatCard.d.ts",
+        "size": 387,
+        "mode": 420
+      },
+      {
+        "path": "dist/components/SfStatCard.js",
+        "size": 2244,
+        "mode": 420
+      },
+      {
+        "path": "dist/components/SfStepper.d.ts",
+        "size": 246,
+        "mode": 420
+      },
+      {
+        "path": "dist/components/SfStepper.js",
+        "size": 1605,
+        "mode": 420
+      },
+      {
+        "path": "dist/components/SfSurface.d.ts",
+        "size": 222,
+        "mode": 420
+      },
+      {
+        "path": "dist/components/SfSurface.js",
+        "size": 678,
+        "mode": 420
+      },
+      {
+        "path": "dist/components/SfSwitch.d.ts",
+        "size": 256,
+        "mode": 420
+      },
+      {
+        "path": "dist/components/SfSwitch.js",
+        "size": 997,
+        "mode": 420
+      },
+      {
+        "path": "dist/components/SfTable.d.ts",
+        "size": 421,
+        "mode": 420
+      },
+      {
+        "path": "dist/components/SfTable.js",
+        "size": 7150,
+        "mode": 420
+      },
+      {
+        "path": "dist/components/SfTabs.d.ts",
+        "size": 324,
+        "mode": 420
+      },
+      {
+        "path": "dist/components/SfTabs.js",
+        "size": 2792,
+        "mode": 420
+      },
+      {
+        "path": "dist/components/SfTextarea.d.ts",
+        "size": 264,
+        "mode": 420
+      },
+      {
+        "path": "dist/components/SfTextarea.js",
+        "size": 1602,
+        "mode": 420
+      },
+      {
+        "path": "dist/components/SfTimeline.d.ts",
+        "size": 195,
+        "mode": 420
+      },
+      {
+        "path": "dist/components/SfTimeline.js",
+        "size": 865,
+        "mode": 420
+      },
+      {
+        "path": "dist/components/SfToast.d.ts",
+        "size": 224,
+        "mode": 420
+      },
+      {
+        "path": "dist/components/SfToast.js",
+        "size": 1234,
+        "mode": 420
+      },
+      {
+        "path": "dist/components/SfTooltip.d.ts",
+        "size": 186,
+        "mode": 420
+      },
+      {
+        "path": "dist/components/SfTooltip.js",
+        "size": 676,
+        "mode": 420
+      },
+      {
+        "path": "dist/components/SfWorkflow.d.ts",
+        "size": 219,
+        "mode": 420
+      },
+      {
+        "path": "dist/components/SfWorkflow.js",
+        "size": 1876,
+        "mode": 420
+      },
+      {
+        "path": "dist/element-runtime-DAEUp2la.js",
+        "size": 235514,
+        "mode": 420
+      },
+      {
+        "path": "dist/elements/index.d.ts",
+        "size": 4541,
+        "mode": 420
+      },
+      {
+        "path": "dist/elements/index.js",
+        "size": 4908,
+        "mode": 420
+      },
+      {
+        "path": "dist/elements/SfAccordion.d.ts",
+        "size": 330,
+        "mode": 420
+      },
+      {
+        "path": "dist/elements/SfAccordion.js",
+        "size": 878,
+        "mode": 420
+      },
+      {
+        "path": "dist/elements/SfAdaptedCards.d.ts",
+        "size": 495,
+        "mode": 420
+      },
+      {
+        "path": "dist/elements/SfAdaptedCards.js",
+        "size": 5364,
+        "mode": 420
+      },
+      {
+        "path": "dist/elements/SfAlert.d.ts",
+        "size": 366,
+        "mode": 420
+      },
+      {
+        "path": "dist/elements/SfAlert.js",
+        "size": 215,
+        "mode": 420
+      },
+      {
+        "path": "dist/elements/SfAvatar.d.ts",
+        "size": 391,
+        "mode": 420
+      },
+      {
+        "path": "dist/elements/SfAvatar.js",
+        "size": 218,
+        "mode": 420
+      },
+      {
+        "path": "dist/elements/SfBadge.d.ts",
+        "size": 344,
+        "mode": 420
+      },
+      {
+        "path": "dist/elements/SfBadge.js",
+        "size": 215,
+        "mode": 420
+      },
+      {
+        "path": "dist/elements/SfBarChart.d.ts",
+        "size": 605,
+        "mode": 420
+      },
+      {
+        "path": "dist/elements/SfBarChart.js",
+        "size": 225,
+        "mode": 420
+      },
+      {
+        "path": "dist/elements/SfBottomNav.d.ts",
+        "size": 474,
+        "mode": 420
+      },
+      {
+        "path": "dist/elements/SfBottomNav.js",
+        "size": 1496,
+        "mode": 420
+      },
+      {
+        "path": "dist/elements/SfBreadcrumbs.d.ts",
+        "size": 338,
+        "mode": 420
+      },
+      {
+        "path": "dist/elements/SfBreadcrumbs.js",
+        "size": 1146,
+        "mode": 420
+      },
+      {
+        "path": "dist/elements/SfButton.d.ts",
+        "size": 416,
+        "mode": 420
+      },
+      {
+        "path": "dist/elements/SfButton.js",
+        "size": 218,
+        "mode": 420
+      },
+      {
+        "path": "dist/elements/SfButtonGroup.d.ts",
+        "size": 503,
+        "mode": 420
+      },
+      {
+        "path": "dist/elements/SfButtonGroup.js",
+        "size": 1560,
+        "mode": 420
+      },
+      {
+        "path": "dist/elements/SfCalendar.d.ts",
+        "size": 347,
+        "mode": 420
+      },
+      {
+        "path": "dist/elements/SfCalendar.js",
+        "size": 4086,
+        "mode": 420
+      },
+      {
+        "path": "dist/elements/SfCheckbox.d.ts",
+        "size": 391,
+        "mode": 420
+      },
+      {
+        "path": "dist/elements/SfCheckbox.js",
+        "size": 841,
+        "mode": 420
+      },
+      {
+        "path": "dist/elements/SfClock.d.ts",
+        "size": 311,
+        "mode": 420
+      },
+      {
+        "path": "dist/elements/SfClock.js",
+        "size": 1757,
+        "mode": 420
+      },
+      {
+        "path": "dist/elements/SfDial.d.ts",
+        "size": 350,
+        "mode": 420
+      },
+      {
+        "path": "dist/elements/SfDial.js",
+        "size": 1509,
+        "mode": 420
+      },
+      {
+        "path": "dist/elements/SfDivider.d.ts",
+        "size": 316,
+        "mode": 420
+      },
+      {
+        "path": "dist/elements/SfDivider.js",
+        "size": 591,
+        "mode": 420
+      },
+      {
+        "path": "dist/elements/SfDonutChart.d.ts",
+        "size": 594,
+        "mode": 420
+      },
+      {
+        "path": "dist/elements/SfDonutChart.js",
+        "size": 2360,
+        "mode": 420
+      },
+      {
+        "path": "dist/elements/SfDrawer.d.ts",
+        "size": 360,
+        "mode": 420
+      },
+      {
+        "path": "dist/elements/SfDrawer.js",
+        "size": 1572,
+        "mode": 420
+      },
+      {
+        "path": "dist/elements/SfDropdown.d.ts",
+        "size": 345,
+        "mode": 420
+      },
+      {
+        "path": "dist/elements/SfDropdown.js",
+        "size": 3165,
+        "mode": 420
+      },
+      {
+        "path": "dist/elements/SfElement.d.ts",
+        "size": 353,
+        "mode": 420
+      },
+      {
+        "path": "dist/elements/SfElement.js",
+        "size": 537,
+        "mode": 420
+      },
+      {
+        "path": "dist/elements/SfEmptyState.d.ts",
+        "size": 407,
+        "mode": 420
+      },
+      {
+        "path": "dist/elements/SfEmptyState.js",
+        "size": 231,
+        "mode": 420
+      },
+      {
+        "path": "dist/elements/SfFab.d.ts",
+        "size": 321,
+        "mode": 420
+      },
+      {
+        "path": "dist/elements/SfFab.js",
+        "size": 798,
+        "mode": 420
+      },
+      {
+        "path": "dist/elements/SfFileUpload.d.ts",
+        "size": 352,
+        "mode": 420
+      },
+      {
+        "path": "dist/elements/SfFileUpload.js",
+        "size": 2155,
+        "mode": 420
+      },
+      {
+        "path": "dist/elements/SfIcon.d.ts",
+        "size": 324,
+        "mode": 420
+      },
+      {
+        "path": "dist/elements/SfIcon.js",
+        "size": 212,
+        "mode": 420
+      },
+      {
+        "path": "dist/elements/SfIconButton.d.ts",
+        "size": 430,
+        "mode": 420
+      },
+      {
+        "path": "dist/elements/SfIconButton.js",
+        "size": 231,
+        "mode": 420
+      },
+      {
+        "path": "dist/elements/SfInput.d.ts",
+        "size": 1242,
+        "mode": 420
+      },
+      {
+        "path": "dist/elements/SfInput.js",
+        "size": 4796,
+        "mode": 420
+      },
+      {
+        "path": "dist/elements/SfListCard.d.ts",
+        "size": 346,
+        "mode": 420
+      },
+      {
+        "path": "dist/elements/SfListCard.js",
+        "size": 1442,
+        "mode": 420
+      },
+      {
+        "path": "dist/elements/SfMediaPlayer.d.ts",
+        "size": 375,
+        "mode": 420
+      },
+      {
+        "path": "dist/elements/SfMediaPlayer.js",
+        "size": 260186,
+        "mode": 420
+      },
+      {
+        "path": "dist/elements/SfMetricPanel.d.ts",
+        "size": 524,
+        "mode": 420
+      },
+      {
+        "path": "dist/elements/SfMetricPanel.js",
+        "size": 2603,
+        "mode": 420
+      },
+      {
+        "path": "dist/elements/SfMixer.d.ts",
+        "size": 383,
+        "mode": 420
+      },
+      {
+        "path": "dist/elements/SfMixer.js",
+        "size": 1999,
+        "mode": 420
+      },
+      {
+        "path": "dist/elements/SfModal.d.ts",
+        "size": 375,
+        "mode": 420
+      },
+      {
+        "path": "dist/elements/SfModal.js",
+        "size": 1618,
+        "mode": 420
+      },
+      {
+        "path": "dist/elements/SfNavList.d.ts",
+        "size": 485,
+        "mode": 420
+      },
+      {
+        "path": "dist/elements/SfNavList.js",
+        "size": 1912,
+        "mode": 420
+      },
+      {
+        "path": "dist/elements/SfNotification.d.ts",
+        "size": 452,
+        "mode": 420
+      },
+      {
+        "path": "dist/elements/SfNotification.js",
+        "size": 236,
+        "mode": 420
+      },
+      {
+        "path": "dist/elements/SfPagination.d.ts",
+        "size": 474,
+        "mode": 420
+      },
+      {
+        "path": "dist/elements/SfPagination.js",
+        "size": 1989,
+        "mode": 420
+      },
+      {
+        "path": "dist/elements/SfProfileCard.d.ts",
+        "size": 395,
+        "mode": 420
+      },
+      {
+        "path": "dist/elements/SfProfileCard.js",
+        "size": 2036,
+        "mode": 420
+      },
+      {
+        "path": "dist/elements/SfProgress.d.ts",
+        "size": 464,
+        "mode": 420
+      },
+      {
+        "path": "dist/elements/SfProgress.js",
+        "size": 1499,
+        "mode": 420
+      },
+      {
+        "path": "dist/elements/SfRadioGroup.d.ts",
+        "size": 399,
+        "mode": 420
+      },
+      {
+        "path": "dist/elements/SfRadioGroup.js",
+        "size": 1193,
+        "mode": 420
+      },
+      {
+        "path": "dist/elements/SfRating.d.ts",
+        "size": 375,
+        "mode": 420
+      },
+      {
+        "path": "dist/elements/SfRating.js",
+        "size": 1912,
+        "mode": 420
+      },
+      {
+        "path": "dist/elements/SfSegmented.d.ts",
+        "size": 494,
+        "mode": 420
+      },
+      {
+        "path": "dist/elements/SfSegmented.js",
+        "size": 1727,
+        "mode": 420
+      },
+      {
+        "path": "dist/elements/SfSelect.d.ts",
+        "size": 382,
+        "mode": 420
+      },
+      {
+        "path": "dist/elements/SfSelect.js",
+        "size": 1119,
+        "mode": 420
+      },
+      {
+        "path": "dist/elements/SfSkeleton.d.ts",
+        "size": 322,
+        "mode": 420
+      },
+      {
+        "path": "dist/elements/SfSkeleton.js",
+        "size": 1073,
+        "mode": 420
+      },
+      {
+        "path": "dist/elements/SfSlider.d.ts",
+        "size": 448,
+        "mode": 420
+      },
+      {
+        "path": "dist/elements/SfSlider.js",
+        "size": 1877,
+        "mode": 420
+      },
+      {
+        "path": "dist/elements/SfSpinner.d.ts",
+        "size": 337,
+        "mode": 420
+      },
+      {
+        "path": "dist/elements/SfSpinner.js",
+        "size": 221,
+        "mode": 420
+      },
+      {
+        "path": "dist/elements/SfStatCard.d.ts",
+        "size": 519,
+        "mode": 420
+      },
+      {
+        "path": "dist/elements/SfStatCard.js",
+        "size": 2277,
+        "mode": 420
+      },
+      {
+        "path": "dist/elements/SfStepper.d.ts",
+        "size": 396,
+        "mode": 420
+      },
+      {
+        "path": "dist/elements/SfStepper.js",
+        "size": 1672,
+        "mode": 420
+      },
+      {
+        "path": "dist/elements/SfSurface.d.ts",
+        "size": 353,
+        "mode": 420
+      },
+      {
+        "path": "dist/elements/SfSurface.js",
+        "size": 216,
+        "mode": 420
+      },
+      {
+        "path": "dist/elements/SfSwitch.d.ts",
+        "size": 407,
+        "mode": 420
+      },
+      {
+        "path": "dist/elements/SfSwitch.js",
+        "size": 1036,
+        "mode": 420
+      },
+      {
+        "path": "dist/elements/SfTable.d.ts",
+        "size": 552,
+        "mode": 420
+      },
+      {
+        "path": "dist/elements/SfTable.js",
+        "size": 7126,
+        "mode": 420
+      },
+      {
+        "path": "dist/elements/SfTabs.d.ts",
+        "size": 474,
+        "mode": 420
+      },
+      {
+        "path": "dist/elements/SfTabs.js",
+        "size": 2760,
+        "mode": 420
+      },
+      {
+        "path": "dist/elements/SfTextarea.d.ts",
+        "size": 414,
+        "mode": 420
+      },
+      {
+        "path": "dist/elements/SfTextarea.js",
+        "size": 1601,
+        "mode": 420
+      },
+      {
+        "path": "dist/elements/SfTimeline.d.ts",
+        "size": 326,
+        "mode": 420
+      },
+      {
+        "path": "dist/elements/SfTimeline.js",
+        "size": 905,
+        "mode": 420
+      },
+      {
+        "path": "dist/elements/SfToast.d.ts",
+        "size": 355,
+        "mode": 420
+      },
+      {
+        "path": "dist/elements/SfToast.js",
+        "size": 1228,
+        "mode": 420
+      },
+      {
+        "path": "dist/elements/SfTooltip.d.ts",
+        "size": 317,
+        "mode": 420
+      },
+      {
+        "path": "dist/elements/SfTooltip.js",
+        "size": 726,
+        "mode": 420
+      },
+      {
+        "path": "dist/elements/SfWorkflow.d.ts",
+        "size": 369,
+        "mode": 420
+      },
+      {
+        "path": "dist/elements/SfWorkflow.js",
+        "size": 1928,
+        "mode": 420
+      },
+      {
+        "path": "dist/helpers-C6CcBVEC.js",
+        "size": 7121,
+        "mode": 420
+      },
+      {
+        "path": "dist/helpers-xM7N6Oxk.js",
+        "size": 7108,
+        "mode": 420
+      },
+      {
+        "path": "dist/index.d.ts",
+        "size": 3824,
+        "mode": 420
+      },
+      {
+        "path": "dist/index.js",
+        "size": 4171,
+        "mode": 420
+      },
+      {
+        "path": "dist/react/createReactComponent.js",
+        "size": 2733,
+        "mode": 420
+      },
+      {
+        "path": "dist/react/index.d.ts",
+        "size": 5681,
+        "mode": 420
+      },
+      {
+        "path": "dist/react/index.js",
+        "size": 2443,
+        "mode": 420
+      },
+      {
+        "path": "dist/react/SfAccordion.d.ts",
+        "size": 772,
+        "mode": 420
+      },
+      {
+        "path": "dist/react/SfAccordion.js",
+        "size": 332,
+        "mode": 420
+      },
+      {
+        "path": "dist/react/SfAdaptedCards.d.ts",
+        "size": 799,
+        "mode": 420
+      },
+      {
+        "path": "dist/react/SfAdaptedCards.js",
+        "size": 383,
+        "mode": 420
+      },
+      {
+        "path": "dist/react/SfAlert.d.ts",
+        "size": 736,
+        "mode": 420
+      },
+      {
+        "path": "dist/react/SfAlert.js",
+        "size": 304,
+        "mode": 420
+      },
+      {
+        "path": "dist/react/SfAvatar.d.ts",
+        "size": 745,
+        "mode": 420
+      },
+      {
+        "path": "dist/react/SfAvatar.js",
+        "size": 311,
+        "mode": 420
+      },
+      {
+        "path": "dist/react/SfBadge.d.ts",
+        "size": 736,
+        "mode": 420
+      },
+      {
+        "path": "dist/react/SfBadge.js",
+        "size": 304,
+        "mode": 420
+      },
+      {
+        "path": "dist/react/SfBarChart.d.ts",
+        "size": 763,
+        "mode": 420
+      },
+      {
+        "path": "dist/react/SfBarChart.js",
+        "size": 327,
+        "mode": 420
+      },
+      {
+        "path": "dist/react/SfBottomNav.d.ts",
+        "size": 810,
+        "mode": 420
+      },
+      {
+        "path": "dist/react/SfBottomNav.js",
+        "size": 353,
+        "mode": 420
+      },
+      {
+        "path": "dist/react/SfBreadcrumbs.d.ts",
+        "size": 790,
+        "mode": 420
+      },
+      {
+        "path": "dist/react/SfBreadcrumbs.js",
+        "size": 356,
+        "mode": 420
+      },
+      {
+        "path": "dist/react/SfButton.d.ts",
+        "size": 745,
+        "mode": 420
+      },
+      {
+        "path": "dist/react/SfButton.js",
+        "size": 318,
+        "mode": 420
+      },
+      {
+        "path": "dist/react/SfButtonGroup.d.ts",
+        "size": 830,
+        "mode": 420
+      },
+      {
+        "path": "dist/react/SfButtonGroup.js",
+        "size": 367,
+        "mode": 420
+      },
+      {
+        "path": "dist/react/SfCalendar.d.ts",
+        "size": 800,
+        "mode": 420
+      },
+      {
+        "path": "dist/react/SfCalendar.js",
+        "size": 344,
+        "mode": 420
+      },
+      {
+        "path": "dist/react/SfCheckbox.d.ts",
+        "size": 800,
+        "mode": 420
+      },
+      {
+        "path": "dist/react/SfCheckbox.js",
+        "size": 344,
+        "mode": 420
+      },
+      {
+        "path": "dist/react/SfClock.d.ts",
+        "size": 736,
+        "mode": 420
+      },
+      {
+        "path": "dist/react/SfClock.js",
+        "size": 304,
+        "mode": 420
+      },
+      {
+        "path": "dist/react/SfDial.d.ts",
+        "size": 760,
+        "mode": 420
+      },
+      {
+        "path": "dist/react/SfDial.js",
+        "size": 316,
+        "mode": 420
+      },
+      {
+        "path": "dist/react/SfDivider.d.ts",
+        "size": 754,
+        "mode": 420
+      },
+      {
+        "path": "dist/react/SfDivider.js",
+        "size": 318,
+        "mode": 420
+      },
+      {
+        "path": "dist/react/SfDonutChart.d.ts",
+        "size": 781,
+        "mode": 420
+      },
+      {
+        "path": "dist/react/SfDonutChart.js",
+        "size": 341,
+        "mode": 420
+      },
+      {
+        "path": "dist/react/SfDrawer.d.ts",
+        "size": 780,
+        "mode": 420
+      },
+      {
+        "path": "dist/react/SfDrawer.js",
+        "size": 330,
+        "mode": 420
+      },
+      {
+        "path": "dist/react/SfDropdown.d.ts",
+        "size": 763,
+        "mode": 420
+      },
+      {
+        "path": "dist/react/SfDropdown.js",
+        "size": 333,
+        "mode": 420
+      },
+      {
+        "path": "dist/react/SfElement.d.ts",
+        "size": 754,
+        "mode": 420
+      },
+      {
+        "path": "dist/react/SfElement.js",
+        "size": 318,
+        "mode": 420
+      },
+      {
+        "path": "dist/react/SfEmptyState.d.ts",
+        "size": 781,
+        "mode": 420
+      },
+      {
+        "path": "dist/react/SfEmptyState.js",
+        "size": 349,
+        "mode": 420
+      },
+      {
+        "path": "dist/react/SfFab.d.ts",
+        "size": 718,
+        "mode": 420
+      },
+      {
+        "path": "dist/react/SfFab.js",
+        "size": 297,
+        "mode": 420
+      },
+      {
+        "path": "dist/react/SfFileUpload.d.ts",
+        "size": 781,
+        "mode": 420
+      },
+      {
+        "path": "dist/react/SfFileUpload.js",
+        "size": 349,
+        "mode": 420
+      },
+      {
+        "path": "dist/react/SfIcon.d.ts",
+        "size": 727,
+        "mode": 420
+      },
+      {
+        "path": "dist/react/SfIcon.js",
+        "size": 297,
+        "mode": 420
+      },
+      {
+        "path": "dist/react/SfIconButton.d.ts",
+        "size": 781,
+        "mode": 420
+      },
+      {
+        "path": "dist/react/SfIconButton.js",
+        "size": 348,
+        "mode": 420
+      },
+      {
+        "path": "dist/react/SfInput.d.ts",
+        "size": 770,
+        "mode": 420
+      },
+      {
+        "path": "dist/react/SfInput.js",
+        "size": 323,
+        "mode": 420
+      },
+      {
+        "path": "dist/react/SfListCard.d.ts",
+        "size": 763,
+        "mode": 420
+      },
+      {
+        "path": "dist/react/SfListCard.js",
+        "size": 335,
+        "mode": 420
+      },
+      {
+        "path": "dist/react/SfMediaPlayer.d.ts",
+        "size": 790,
+        "mode": 420
+      },
+      {
+        "path": "dist/react/SfMediaPlayer.js",
+        "size": 348,
+        "mode": 420
+      },
+      {
+        "path": "dist/react/SfMetricPanel.d.ts",
+        "size": 790,
+        "mode": 420
+      },
+      {
+        "path": "dist/react/SfMetricPanel.js",
+        "size": 348,
+        "mode": 420
+      },
+      {
+        "path": "dist/react/SfMixer.d.ts",
+        "size": 770,
+        "mode": 420
+      },
+      {
+        "path": "dist/react/SfMixer.js",
+        "size": 323,
+        "mode": 420
+      },
+      {
+        "path": "dist/react/SfModal.d.ts",
+        "size": 770,
+        "mode": 420
+      },
+      {
+        "path": "dist/react/SfModal.js",
+        "size": 323,
+        "mode": 420
+      },
+      {
+        "path": "dist/react/SfNavList.d.ts",
+        "size": 790,
+        "mode": 420
+      },
+      {
+        "path": "dist/react/SfNavList.js",
+        "size": 339,
+        "mode": 420
+      },
+      {
+        "path": "dist/react/SfNotification.d.ts",
+        "size": 799,
+        "mode": 420
+      },
+      {
+        "path": "dist/react/SfNotification.js",
+        "size": 361,
+        "mode": 420
+      },
+      {
+        "path": "dist/react/SfPagination.d.ts",
+        "size": 820,
+        "mode": 420
+      },
+      {
+        "path": "dist/react/SfPagination.js",
+        "size": 358,
+        "mode": 420
+      },
+      {
+        "path": "dist/react/SfProfileCard.d.ts",
+        "size": 790,
+        "mode": 420
+      },
+      {
+        "path": "dist/react/SfProfileCard.js",
+        "size": 356,
+        "mode": 420
+      },
+      {
+        "path": "dist/react/SfProgress.d.ts",
+        "size": 763,
+        "mode": 420
+      },
+      {
+        "path": "dist/react/SfProgress.js",
+        "size": 325,
+        "mode": 420
+      },
+      {
+        "path": "dist/react/SfRadioGroup.d.ts",
+        "size": 820,
+        "mode": 420
+      },
+      {
+        "path": "dist/react/SfRadioGroup.js",
+        "size": 360,
+        "mode": 420
+      },
+      {
+        "path": "dist/react/SfRating.d.ts",
+        "size": 780,
+        "mode": 420
+      },
+      {
+        "path": "dist/react/SfRating.js",
+        "size": 330,
+        "mode": 420
+      },
+      {
+        "path": "dist/react/SfSegmented.d.ts",
+        "size": 810,
+        "mode": 420
+      },
+      {
+        "path": "dist/react/SfSegmented.js",
+        "size": 351,
+        "mode": 420
+      },
+      {
+        "path": "dist/react/SfSelect.d.ts",
+        "size": 780,
+        "mode": 420
+      },
+      {
+        "path": "dist/react/SfSelect.js",
+        "size": 330,
+        "mode": 420
+      },
+      {
+        "path": "dist/react/SfSkeleton.d.ts",
+        "size": 763,
+        "mode": 420
+      },
+      {
+        "path": "dist/react/SfSkeleton.js",
+        "size": 325,
+        "mode": 420
+      },
+      {
+        "path": "dist/react/SfSlider.d.ts",
+        "size": 780,
+        "mode": 420
+      },
+      {
+        "path": "dist/react/SfSlider.js",
+        "size": 330,
+        "mode": 420
+      },
+      {
+        "path": "dist/react/SfSpinner.d.ts",
+        "size": 754,
+        "mode": 420
+      },
+      {
+        "path": "dist/react/SfSpinner.js",
+        "size": 318,
+        "mode": 420
+      },
+      {
+        "path": "dist/react/SfStatCard.d.ts",
+        "size": 763,
+        "mode": 420
+      },
+      {
+        "path": "dist/react/SfStatCard.js",
+        "size": 327,
+        "mode": 420
+      },
+      {
+        "path": "dist/react/SfStepper.d.ts",
+        "size": 790,
+        "mode": 420
+      },
+      {
+        "path": "dist/react/SfStepper.js",
+        "size": 337,
+        "mode": 420
+      },
+      {
+        "path": "dist/react/SfSurface.d.ts",
+        "size": 754,
+        "mode": 420
+      },
+      {
+        "path": "dist/react/SfSurface.js",
+        "size": 318,
+        "mode": 420
+      },
+      {
+        "path": "dist/react/SfSwitch.d.ts",
+        "size": 780,
+        "mode": 420
+      },
+      {
+        "path": "dist/react/SfSwitch.js",
+        "size": 330,
+        "mode": 420
+      },
+      {
+        "path": "dist/react/SfTable.d.ts",
+        "size": 736,
+        "mode": 420
+      },
+      {
+        "path": "dist/react/SfTable.js",
+        "size": 304,
+        "mode": 420
+      },
+      {
+        "path": "dist/react/SfTabs.d.ts",
+        "size": 760,
+        "mode": 420
+      },
+      {
+        "path": "dist/react/SfTabs.js",
+        "size": 316,
+        "mode": 420
+      },
+      {
+        "path": "dist/react/SfTextarea.d.ts",
+        "size": 800,
+        "mode": 420
+      },
+      {
+        "path": "dist/react/SfTextarea.js",
+        "size": 344,
+        "mode": 420
+      },
+      {
+        "path": "dist/react/SfTimeline.d.ts",
+        "size": 763,
+        "mode": 420
+      },
+      {
+        "path": "dist/react/SfTimeline.js",
+        "size": 325,
+        "mode": 420
+      },
+      {
+        "path": "dist/react/SfToast.d.ts",
+        "size": 736,
+        "mode": 420
+      },
+      {
+        "path": "dist/react/SfToast.js",
+        "size": 313,
+        "mode": 420
+      },
+      {
+        "path": "dist/react/SfTooltip.d.ts",
+        "size": 754,
+        "mode": 420
+      },
+      {
+        "path": "dist/react/SfTooltip.js",
+        "size": 318,
+        "mode": 420
+      },
+      {
+        "path": "dist/react/SfWorkflow.d.ts",
+        "size": 800,
+        "mode": 420
+      },
+      {
+        "path": "dist/react/SfWorkflow.js",
+        "size": 344,
+        "mode": 420
+      },
+      {
+        "path": "dist/SfAlert-DVzOYMjV.js",
+        "size": 1162,
+        "mode": 420
+      },
+      {
+        "path": "dist/SfAvatar-BQ6CSOtZ.js",
+        "size": 847,
+        "mode": 420
+      },
+      {
+        "path": "dist/SfBadge-av905MU3.js",
+        "size": 573,
+        "mode": 420
+      },
+      {
+        "path": "dist/SfBarChart-Dt9j2ZEG.js",
+        "size": 5119,
+        "mode": 420
+      },
+      {
+        "path": "dist/SfButton-C0DX3Jc0.js",
+        "size": 1158,
+        "mode": 420
+      },
+      {
+        "path": "dist/SfEmptyState-CUuHEYx0.js",
+        "size": 1407,
+        "mode": 420
+      },
+      {
+        "path": "dist/SfIcon-QA9_XMV2.js",
+        "size": 522,
+        "mode": 420
+      },
+      {
+        "path": "dist/SfIconButton-RMJFxm8m.js",
+        "size": 978,
+        "mode": 420
+      },
+      {
+        "path": "dist/SfNotification-DJuOBOrm.js",
+        "size": 1979,
+        "mode": 420
+      },
+      {
+        "path": "dist/SfSpinner-CwNBSZZI.js",
+        "size": 493,
+        "mode": 420
+      },
+      {
+        "path": "dist/SfSurface-BVDSjmjf.js",
+        "size": 642,
+        "mode": 420
+      },
+      {
+        "path": "dist/styles.css",
+        "size": 53596,
+        "mode": 420
+      },
+      {
+        "path": "dist/useMotionNumber-BAzhDkTB.js",
+        "size": 1453,
+        "mode": 420
+      },
+      {
+        "path": "dist/useMotionNumber-BzwNrWnn.js",
+        "size": 1455,
+        "mode": 420
+      },
+      {
+        "path": "dist/useSelectionMotion-W5cATsPr.js",
+        "size": 956,
+        "mode": 420
+      },
+      {
+        "path": "dist/useSelectionMotion-xRuEKuv5.js",
+        "size": 951,
+        "mode": 420
+      },
+      {
+        "path": "docs/agent-guide.md",
+        "size": 5795,
+        "mode": 420
+      },
+      {
+        "path": "docs/components/SfAccordion.md",
+        "size": 478,
+        "mode": 420
+      },
+      {
+        "path": "docs/components/SfAdaptedCards.md",
+        "size": 751,
+        "mode": 420
+      },
+      {
+        "path": "docs/components/SfAlert.md",
+        "size": 619,
+        "mode": 420
+      },
+      {
+        "path": "docs/components/SfAvatar.md",
+        "size": 525,
+        "mode": 420
+      },
+      {
+        "path": "docs/components/SfBadge.md",
+        "size": 513,
+        "mode": 420
+      },
+      {
+        "path": "docs/components/SfBarChart.md",
+        "size": 1421,
+        "mode": 420
+      },
+      {
+        "path": "docs/components/SfBottomNav.md",
+        "size": 860,
+        "mode": 420
+      },
+      {
+        "path": "docs/components/SfBreadcrumbs.md",
+        "size": 446,
+        "mode": 420
+      },
+      {
+        "path": "docs/components/SfButton.md",
+        "size": 605,
+        "mode": 420
+      },
+      {
+        "path": "docs/components/SfButtonGroup.md",
+        "size": 851,
+        "mode": 420
+      },
+      {
+        "path": "docs/components/SfCalendar.md",
+        "size": 402,
+        "mode": 420
+      },
+      {
+        "path": "docs/components/SfCheckbox.md",
+        "size": 488,
+        "mode": 420
+      },
+      {
+        "path": "docs/components/SfClock.md",
+        "size": 398,
+        "mode": 420
+      },
+      {
+        "path": "docs/components/SfDial.md",
+        "size": 453,
+        "mode": 420
+      },
+      {
+        "path": "docs/components/SfDivider.md",
+        "size": 405,
+        "mode": 420
+      },
+      {
+        "path": "docs/components/SfDonutChart.md",
+        "size": 1170,
+        "mode": 420
+      },
+      {
+        "path": "docs/components/SfDrawer.md",
+        "size": 548,
+        "mode": 420
+      },
+      {
+        "path": "docs/components/SfDropdown.md",
+        "size": 479,
+        "mode": 420
+      },
+      {
+        "path": "docs/components/SfElement.md",
+        "size": 447,
+        "mode": 420
+      },
+      {
+        "path": "docs/components/SfEmptyState.md",
+        "size": 737,
+        "mode": 420
+      },
+      {
+        "path": "docs/components/SfFab.md",
+        "size": 420,
+        "mode": 420
+      },
+      {
+        "path": "docs/components/SfFileUpload.md",
+        "size": 566,
+        "mode": 420
+      },
+      {
+        "path": "docs/components/SfIcon.md",
+        "size": 420,
+        "mode": 420
+      },
+      {
+        "path": "docs/components/SfIconButton.md",
+        "size": 597,
+        "mode": 420
+      },
+      {
+        "path": "docs/components/SfInput.md",
+        "size": 2387,
+        "mode": 420
+      },
+      {
+        "path": "docs/components/SfListCard.md",
+        "size": 460,
+        "mode": 420
+      },
+      {
+        "path": "docs/components/SfMediaPlayer.md",
+        "size": 550,
+        "mode": 420
+      },
+      {
+        "path": "docs/components/SfMetricPanel.md",
+        "size": 864,
+        "mode": 420
+      },
+      {
+        "path": "docs/components/SfMixer.md",
+        "size": 546,
+        "mode": 420
+      },
+      {
+        "path": "docs/components/SfModal.md",
+        "size": 642,
+        "mode": 420
+      },
+      {
+        "path": "docs/components/SfNavList.md",
+        "size": 794,
+        "mode": 420
+      },
+      {
+        "path": "docs/components/SfNotification.md",
+        "size": 778,
+        "mode": 420
+      },
+      {
+        "path": "docs/components/SfPagination.md",
+        "size": 746,
+        "mode": 420
+      },
+      {
+        "path": "docs/components/SfProfileCard.md",
+        "size": 577,
+        "mode": 420
+      },
+      {
+        "path": "docs/components/SfProgress.md",
+        "size": 878,
+        "mode": 420
+      },
+      {
+        "path": "docs/components/SfRadioGroup.md",
+        "size": 473,
+        "mode": 420
+      },
+      {
+        "path": "docs/components/SfRating.md",
+        "size": 488,
+        "mode": 420
+      },
+      {
+        "path": "docs/components/SfSegmented.md",
+        "size": 852,
+        "mode": 420
+      },
+      {
+        "path": "docs/components/SfSelect.md",
+        "size": 479,
+        "mode": 420
+      },
+      {
+        "path": "docs/components/SfSkeleton.md",
+        "size": 348,
+        "mode": 420
+      },
+      {
+        "path": "docs/components/SfSlider.md",
+        "size": 599,
+        "mode": 420
+      },
+      {
+        "path": "docs/components/SfSpinner.md",
+        "size": 420,
+        "mode": 420
+      },
+      {
+        "path": "docs/components/SfStatCard.md",
+        "size": 906,
+        "mode": 420
+      },
+      {
+        "path": "docs/components/SfStepper.md",
+        "size": 519,
+        "mode": 420
+      },
+      {
+        "path": "docs/components/SfSurface.md",
+        "size": 547,
+        "mode": 420
+      },
+      {
+        "path": "docs/components/SfSwitch.md",
+        "size": 513,
+        "mode": 420
+      },
+      {
+        "path": "docs/components/SfTable.md",
+        "size": 1281,
+        "mode": 420
+      },
+      {
+        "path": "docs/components/SfTabs.md",
+        "size": 919,
+        "mode": 420
+      },
+      {
+        "path": "docs/components/SfTextarea.md",
+        "size": 520,
+        "mode": 420
+      },
+      {
+        "path": "docs/components/SfTimeline.md",
+        "size": 354,
+        "mode": 420
+      },
+      {
+        "path": "docs/components/SfToast.md",
+        "size": 590,
+        "mode": 420
+      },
+      {
+        "path": "docs/components/SfTooltip.md",
+        "size": 523,
+        "mode": 420
+      },
+      {
+        "path": "docs/components/SfWorkflow.md",
+        "size": 446,
+        "mode": 420
+      },
+      {
+        "path": "docs/design-guidelines.md",
+        "size": 5228,
+        "mode": 420
+      },
+      {
+        "path": "docs/README.md",
+        "size": 5788,
+        "mode": 420
+      },
+      {
+        "path": "package.json",
+        "size": 3094,
+        "mode": 420
+      }
+    ],
+    "entryCount": 407,
+    "bundled": []
+  }
+}

@@ -1,0 +1,87 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Softform custom element gallery</title>
+  <style>
+    :root{font-family:Arial,sans-serif;color:#1b2a30;background:#dce5e8}*{box-sizing:border-box}
+    body{margin:0;padding:clamp(18px,4vw,55px)}main{max-width:1350px;margin:auto}
+    header{display:flex;align-items:end;justify-content:space-between;gap:24px;flex-wrap:wrap;margin-bottom:28px}
+    h1{font-size:clamp(32px,4.5vw,58px);letter-spacing:-.05em;line-height:1;margin:0 0 10px}
+    header p{max-width:650px;line-height:1.6;color:#52676e;margin:0}header a,.card a{color:#2b5060}
+    #search{border:1px solid #aebfc5;border-radius:10px;padding:11px 13px;background:#f6f9f9;min-width:min(100%,260px);font:inherit}
+    .gallery{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,320px),1fr));gap:18px}
+    .card{min-width:0;background:#f2f6f7;border:1px solid #c3d0d4;border-radius:18px;overflow:hidden}
+    .card-head{padding:15px 18px;border-bottom:1px solid #ced9dc;display:flex;align-items:center;justify-content:space-between;gap:10px}
+    .card-head h2{font-size:15px;margin:0}.card-head a{font-size:11px}
+    .stage{min-height:145px;padding:20px;background:linear-gradient(150deg,#eaf1f3,#d5e0e4);container-type:inline-size;overflow:auto;display:grid;place-items:center}
+    .stage>*{max-width:100%}.stage sf-slider,.stage sf-input,.stage sf-textarea,.stage sf-calendar,.stage sf-table,.stage sf-adapted-cards{width:100%}
+    .card-foot{padding:12px 18px;font:10px ui-monospace,monospace;color:#526970;line-height:1.5;overflow-wrap:anywhere}
+    .stage button.open{border:0;border-radius:8px;padding:9px 13px;background:#263a42;color:white;cursor:pointer}
+    .empty{padding:24px;color:#526970}
+  </style>
+</head>
+<body>
+<main>
+  <header><div><h1>53 custom elements</h1><p>Every component on this page runs through a registered HTML custom element. Change a control to see its event feedback. Use the component link for props, guidance, and the Vue example.</p></div><label>Find a component<br><input id="search" type="search" placeholder="Search by name or purpose"></label></header>
+  <div class="gallery" id="gallery"></div>
+  <p class="empty" id="empty" hidden>No matching components.</p>
+</main>
+<script type="module">
+  import { registerSoftformElements } from '../src/elements/index.js';
+  import dictionary from '../src/component-dictionary.json';
+  registerSoftformElements();
+
+  const gallery = document.getElementById('gallery');
+  const cards = [];
+  for (const entry of Object.values(dictionary)) {
+    const card = document.createElement('section');
+    card.className = 'card';
+    const head = document.createElement('div');
+    head.className = 'card-head';
+    const title = document.createElement('h2');
+    title.textContent = entry.name;
+    const link = document.createElement('a');
+    link.href = `/docs.html?component=${entry.name}`;
+    link.textContent = 'Props and guidance';
+    head.append(title, link);
+    const stage = document.createElement('div');
+    stage.className = 'stage';
+    const element = document.createElement(entry.tag);
+    for (const [key, value] of Object.entries(entry.demo.props)) element[key] = structuredClone(value);
+    if (entry.demo.slot) element.textContent = entry.demo.slot;
+    const foot = document.createElement('div');
+    foot.className = 'card-foot';
+    foot.setAttribute('role', 'status');
+    foot.textContent = entry.whenToUse;
+    for (const eventName of ['input','change','click','action','select','adapted','error','dismiss']) {
+      element.addEventListener(eventName, event => {
+        if (eventName === 'click' && !entry.events.includes('click')) return;
+        const detail = event.detail?.value ?? event.detail?.[0];
+        foot.textContent = `${eventName}: ${typeof detail === 'object' ? JSON.stringify(detail).slice(0,120) : detail ?? 'completed'}`;
+      });
+    }
+    if (entry.name === 'SfModal' || entry.name === 'SfDrawer') {
+      element.modelValue = false;
+      const button = document.createElement('button');
+      button.className = 'open';
+      button.type = 'button';
+      button.textContent = `Open ${entry.name}`;
+      button.addEventListener('click', () => { element.value = true; });
+      stage.append(button);
+    }
+    stage.append(element);
+    card.append(head, stage, foot);
+    gallery.append(card);
+    cards.push({ card, search: `${entry.name} ${entry.purpose} ${entry.whenToUse}`.toLowerCase() });
+  }
+  document.getElementById('search').addEventListener('input', event => {
+    const query = event.target.value.trim().toLowerCase();
+    let visible = 0;
+    for (const item of cards) { item.card.hidden = !item.search.includes(query); if (!item.card.hidden) visible++; }
+    document.getElementById('empty').hidden = visible > 0;
+  });
+</script>
+</body>
+</html>
