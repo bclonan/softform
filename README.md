@@ -102,3 +102,11 @@ npm run check
 `npm run check` runs the tests, package and example builds, type checks, tree shaking smoke checks, and the Storybook build. The example sites use local sample data.
 
 MIT licensed. See [LICENSE](https://github.com/bclonan/softform/blob/main/LICENSE).
+
+## Author & Contact
+
+Created by **Bradley Clonan**, software engineer and architect building developer tools and AI/ML systems.
+
+[LinkedIn](https://www.linkedin.com/in/bclonan/) · [GitHub](https://github.com/bclonan) · [Portfolio](https://bclonan.netlify.app/) · [X](https://x.com/ClonanBradley) · [Email](mailto:clonanxyz@gmail.com)
+
+Questions, feedback, or collaboration ideas? Open an issue or reach out directly.
