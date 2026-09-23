@@ -2,6 +2,8 @@
 
 Injects a registry, normalizes the provider payload, validates an immutable CardModel array, then renders provider-agnostic notification cards.
 
+[Live demo](https://softform-34r5.netlify.app/docs.html?component=SfAdaptedCards) · [Storybook](https://softform-34r5.netlify.app/storybook/?path=/story/components-sfadaptedcards--default)
+
 ```vue
 <sf-adapted-cards adapter="rest" :payload="apiResponse"
   @select="openCard" @error="reportError" />

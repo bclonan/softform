@@ -2,6 +2,8 @@
 
 Hand-drawn inline SVG icons. Icons are decorative; provide the accessible label on the surrounding control.
 
+[Live demo](https://softform-34r5.netlify.app/docs.html?component=SfIcon) · [Storybook](https://softform-34r5.netlify.app/storybook/?path=/story/components-sficon--default)
+
 ```vue
 <sf-icon name="sliders" size="lg" />
 ```

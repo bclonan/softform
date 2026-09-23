@@ -2,6 +2,8 @@
 
 A CSS conic-gradient ring, numeric center, and legend. Provide a percentage from 0 to 100.
 
+[Live demo](https://softform-34r5.netlify.app/docs.html?component=SfDonutChart) · [Storybook](https://softform-34r5.netlify.app/storybook/?path=/story/components-sfdonutchart--default)
+
 ```vue
 <sf-donut-chart :value="72" label="Focus"
   primary="Focused" secondary="Available" />

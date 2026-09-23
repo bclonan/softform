@@ -2,6 +2,8 @@
 
 A native radio group in an inset tray. Use for view modes or mutually exclusive settings.
 
+[Live demo](https://softform-34r5.netlify.app/docs.html?component=SfSegmented) · [Storybook](https://softform-34r5.netlify.app/storybook/?path=/story/components-sfsegmented--default)
+
 ```vue
 <sf-segmented v-model="view"
   label="View mode" :options="views" />

@@ -2,6 +2,8 @@
 
 A compact navigation bar for phone-sized layouts, with visible labels and an accent active state.
 
+[Live demo](https://softform-34r5.netlify.app/docs.html?component=SfBottomNav) · [Storybook](https://softform-34r5.netlify.app/storybook/?path=/story/components-sfbottomnav--default)
+
 ```vue
 <sf-bottom-nav v-model="page" :items="navigation" />
 ```

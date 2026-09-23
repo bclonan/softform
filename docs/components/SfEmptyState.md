@@ -2,6 +2,8 @@
 
 A composed icon, title, supporting text, and optional action for a meaningful blank state.
 
+[Live demo](https://softform-34r5.netlify.app/docs.html?component=SfEmptyState) · [Storybook](https://softform-34r5.netlify.app/storybook/?path=/story/components-sfemptystate--default)
+
 ```vue
 <sf-empty-state title="All caught up."
   message="No new messages." action="New message"

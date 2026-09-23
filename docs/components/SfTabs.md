@@ -2,6 +2,8 @@
 
 A controlled tablist with roving focus, linked tab panel, and directional keyboard navigation.
 
+[Live demo](https://softform-34r5.netlify.app/docs.html?component=SfTabs) · [Storybook](https://softform-34r5.netlify.app/storybook/?path=/story/components-sftabs--default)
+
 ```vue
 <sf-tabs v-model="activeTab" :options="tabs">
   <p>{{ content[activeTab] }}</p>

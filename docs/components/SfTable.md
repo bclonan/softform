@@ -2,6 +2,8 @@
 
 A semantic table with sortable column headers. Data is copied before sorting, never mutated in place.
 
+[Live demo](https://softform-34r5.netlify.app/docs.html?component=SfTable) · [Storybook](https://softform-34r5.netlify.app/storybook/?path=/story/components-sftable--default)
+
 ```vue
 <sf-table :columns="columns" :rows="rows"
   caption="Recent activity" />

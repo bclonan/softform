@@ -2,6 +2,8 @@
 
 A native range input with output, limits, units, and optional end labels.
 
+[Live demo](https://softform-34r5.netlify.app/docs.html?component=SfSlider) · [Storybook](https://softform-34r5.netlify.app/storybook/?path=/story/components-sfslider--default)
+
 ```vue
 <sf-slider v-model="brightness" label="Brightness"
   :min="0" :max="100" unit="%" />

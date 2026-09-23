@@ -1,38 +1,57 @@
 # Softform
 
-Softform is a reusable component library built from the original standalone gallery. It contains the 52 original components plus `SfElement` for semantic roots. Every component has a Vue import, a framework-neutral custom element registration, a prop reference, a live docs demo, and a Storybook story. The library also has a data adapter registry and an [agent-readable dictionary](docs/agent-guide.md).
+Softform is a library of 53 responsive components for Vue, React, and plain JavaScript. The components use native HTML controls, configurable motion, and a shared visual system. Each one has a prop reference, a live demo, and a Storybook story. The library also includes a data adapter registry and a [component dictionary for agents](https://github.com/bclonan/softform/blob/main/docs/agent-guide.md).
+
+[Live examples](https://softform-34r5.netlify.app/) · [Component docs](https://softform-34r5.netlify.app/docs.html) · [Storybook](https://softform-34r5.netlify.app/storybook/) · [npm package](https://www.npmjs.com/package/@bclonan/softform)
+
+## Screenshots
+
+The examples use local sample data. The charts show staged loading and animate when values change.
+
+### Workspace dashboard
+
+![Softform workspace dashboard with metrics, activity chart, and navigation](https://softform-34r5.netlify.app/screenshots/dashboard.png)
+
+### Analytics report
+
+![Softform analytics report with metrics and animated charts](https://softform-34r5.netlify.app/screenshots/analytics.png)
+
+### Component documentation
+
+![Softform documentation with the SfSegmented live demo and prop controls](https://softform-34r5.netlify.app/screenshots/docs.png)
+
+### React example
+
+![Softform React example with controlled input, navigation, and chart](https://softform-34r5.netlify.app/screenshots/react.png)
+
+## Install
 
 ```bash
-npm install
-npm run dev
-npm run storybook
+npm install @bclonan/softform
 ```
 
-The example site has a [dashboard](http://127.0.0.1:5173/), [inbox](http://127.0.0.1:5173/examples/inbox.html), [settings page](http://127.0.0.1:5173/examples/settings.html), [analytics report](http://127.0.0.1:5173/examples/analytics.html), [session planner](http://127.0.0.1:5173/examples/planner.html), [plain HTML page](http://127.0.0.1:5173/examples/elements.html), [React page](http://127.0.0.1:5173/examples/react.html), [53-element gallery](http://127.0.0.1:5173/examples/elements-gallery.html), and [documentation browser](http://127.0.0.1:5173/docs.html). Storybook runs at [localhost:6006](http://127.0.0.1:6006/).
+Install Vue 3.5 or React 18.3/19 if you use that framework. Both are optional peer dependencies. Plain JavaScript users can register custom elements without mounting a framework app.
 
-The analytics report uses local sample data to demonstrate staged loading. Sliders control the delay, duration, and spacing between bar animations. It also switches between vertical and horizontal bars, and between searchable table and card views. The planner includes validation, available time slots, a review dialog, and a local booking list.
-
-Selection components expose `motion`, `motionDelay`, `motionDuration`, and `motionEasing`. The dashboard, inbox, and settings examples keep their navigation mounted so the selected destination fills when it changes. Settings lets you tune that fill. `SfInput` passes native input types and their matching attributes to the actual input.
+### Vue
 
 ```vue
 <script setup>
-import { SfButton, SfSurface } from '@bclonan/softform';
+import SfSurface from '@bclonan/softform/components/SfSurface';
+import SfButton from '@bclonan/softform/components/SfButton';
 import '@bclonan/softform/styles.css';
 </script>
 
 <template>
-  <SfSurface as="article">
-    <h2>New ideas</h2>
-    <SfButton variant="accent" @click="create">Create project</SfButton>
+  <SfSurface as="section" aria-labelledby="project-heading">
+    <h2 id="project-heading">Projects</h2>
+    <SfButton variant="accent">Create project</SfButton>
   </SfSurface>
 </template>
 ```
 
-See [usage and adapters](docs/README.md), [design guidelines](docs/design-guidelines.md), and the [component references](docs/components/SfButton.md). Run `npm run check` for tests, package and example builds, and the Storybook build.
+Import from the package root when you prefer named Vue exports. Import from `components/SfName` when you want a path for one component.
 
-The library exports each Vue component and custom element registration as its own ES module. Vue imports use Vue as a peer dependency and import CSS separately. Custom element imports include a bundled renderer and scoped styles, so a plain HTML page can use them without a Vue app. Import only the components the page needs.
-
-React apps can import one adapter at a time. The adapter registers its custom element, passes arrays and objects as DOM properties, and listens to native events. `onValueChange` receives the value and original event.
+### React
 
 ```jsx
 import { useState } from 'react';
@@ -40,8 +59,46 @@ import { SfInput } from '@bclonan/softform/react/SfInput';
 
 function NameField() {
   const [name, setName] = useState('');
-  return <SfInput label="Name" modelValue={name} onValueChange={setName} />;
+  return <SfInput label="Name" modelValue={name} onValueChange={value => setName(String(value))} />;
 }
 ```
 
-The package supports Vue 3.5, React 18.3 or 19, and browser custom elements. The React and Vue dependencies are optional peers. Install the framework you use. The [package guide](docs/README.md) covers each import path.
+The React adapter registers the custom element, sets arrays and objects as DOM properties, and listens to its native events. Import only the adapters you use.
+
+### Plain JavaScript
+
+```js
+import { registerSfSlider } from '@bclonan/softform/elements/SfSlider';
+
+registerSfSlider();
+document.querySelector('sf-slider').addEventListener('input', event => {
+  console.log(event.detail.value);
+});
+```
+
+```html
+<sf-slider label="Volume" min="0" max="100"></sf-slider>
+```
+
+Custom element imports include their renderer and scoped styles. The Vue API imports CSS separately. Component JavaScript imports are tree shakable; custom elements share the library stylesheet.
+
+## Explore the examples
+
+[Dashboard](https://softform-34r5.netlify.app/) · [Inbox](https://softform-34r5.netlify.app/examples/inbox.html) · [Settings](https://softform-34r5.netlify.app/examples/settings.html) · [Analytics](https://softform-34r5.netlify.app/examples/analytics.html) · [Planner](https://softform-34r5.netlify.app/examples/planner.html) · [React](https://softform-34r5.netlify.app/examples/react.html) · [Plain HTML](https://softform-34r5.netlify.app/examples/elements.html) · [53-element gallery](https://softform-34r5.netlify.app/examples/elements-gallery.html)
+
+Selection components expose `motion`, `motionDelay`, `motionDuration`, and `motionEasing`. Charts and metric components can animate data loading with configurable delays and durations. `SfInput` passes native input types and their matching attributes to the actual input. `SfAdaptedCards` accepts REST, GraphQL, legacy, or custom payload adapters.
+
+See the [package guide](https://github.com/bclonan/softform/blob/main/docs/README.md), [design guidelines](https://github.com/bclonan/softform/blob/main/docs/design-guidelines.md), and [live component reference](https://softform-34r5.netlify.app/docs.html) for props, events, and usage advice.
+
+## Develop locally
+
+```bash
+npm install
+npm run dev
+npm run storybook
+npm run check
+```
+
+`npm run check` runs the tests, package and example builds, type checks, tree shaking smoke checks, and the Storybook build. The example sites use local sample data.
+
+MIT licensed. See [LICENSE](https://github.com/bclonan/softform/blob/main/LICENSE).

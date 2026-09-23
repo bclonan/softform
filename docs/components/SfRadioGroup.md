@@ -2,6 +2,8 @@
 
 Mutually exclusive native inputs with fieldset and legend semantics.
 
+[Live demo](https://softform-34r5.netlify.app/docs.html?component=SfRadioGroup) · [Storybook](https://softform-34r5.netlify.app/storybook/?path=/story/components-sfradiogroup--default)
+
 ```vue
 <sf-radio-group v-model="plan" label="Your plan"
   :options="plans" />

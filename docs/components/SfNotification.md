@@ -2,6 +2,8 @@
 
 A small content card with stable presentation props. It knows nothing about REST, GraphQL, or legacy payloads.
 
+[Live demo](https://softform-34r5.netlify.app/docs.html?component=SfNotification) · [Storybook](https://softform-34r5.netlify.app/storybook/?path=/story/components-sfnotification--default)
+
 ```vue
 <sf-notification title="Design review" sender="Maya Chen"
   body="The new surfaces are ready." time="09:41"

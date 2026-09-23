@@ -2,6 +2,8 @@
 
 A lightweight HTML/CSS chart with a full textual data description. No canvas or chart library dependency.
 
+[Live demo](https://softform-34r5.netlify.app/docs.html?component=SfBarChart) · [Storybook](https://softform-34r5.netlify.app/storybook/?path=/story/components-sfbarchart--default)
+
 ```vue
 <SfBarChart :values="[28,43,35,62,49,84,61]"
   :labels="['M','T','W','T','F','S','S']"

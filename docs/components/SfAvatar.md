@@ -2,6 +2,8 @@
 
 Initials or a decorative icon, with an accessible name and three size options.
 
+[Live demo](https://softform-34r5.netlify.app/docs.html?component=SfAvatar) · [Storybook](https://softform-34r5.netlify.app/storybook/?path=/story/components-sfavatar--default)
+
 ```vue
 <sf-avatar initials="AM" label="Brad Morgan"
   tone="dark" size="large" />

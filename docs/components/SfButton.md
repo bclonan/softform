@@ -2,6 +2,8 @@
 
 Surface, dark, accent, and ghost actions. Supports icons, loading, and disabled states.
 
+[Live demo](https://softform-34r5.netlify.app/docs.html?component=SfButton) · [Storybook](https://softform-34r5.netlify.app/storybook/?path=/story/components-sfbutton--default)
+
 ```vue
 <sf-button variant="accent" icon="plus"
   @click="createWorkspace">Create workspace</sf-button>

@@ -2,6 +2,8 @@
 
 A compact live status message with an optional dismiss action. Placement and timing belong to the host app.
 
+[Live demo](https://softform-34r5.netlify.app/docs.html?component=SfToast) · [Storybook](https://softform-34r5.netlify.app/storybook/?path=/story/components-sftoast--default)
+
 ```vue
 <sf-toast message="Workspace saved."
   @dismiss="visible = false" />

@@ -2,6 +2,8 @@
 
 A reusable profile composition with initials, status, role, and an action affordance.
 
+[Live demo](https://softform-34r5.netlify.app/docs.html?component=SfProfileCard) · [Storybook](https://softform-34r5.netlify.app/storybook/?path=/story/components-sfprofilecard--default)
+
 ```vue
 <sf-profile-card name="Brad Morgan" initials="AM"
   role="Product designer" @action="openProfile" />

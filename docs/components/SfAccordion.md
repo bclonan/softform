@@ -2,6 +2,8 @@
 
 Native details elements preserve open/close and keyboard behavior. Multiple sections may remain open.
 
+[Live demo](https://softform-34r5.netlify.app/docs.html?component=SfAccordion) · [Storybook](https://softform-34r5.netlify.app/storybook/?path=/story/components-sfaccordion--default)
+
 ```vue
 <sf-accordion :items="[{
   title: \'Can I customize the materials?\',

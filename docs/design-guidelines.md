@@ -2,6 +2,8 @@
 
 Softform uses pale ceramic surfaces, graphite text, and a small yellow accent. The accent marks a selected state or primary action. It should not fill every card.
 
+See the [live workspace](https://softform-34r5.netlify.app/), [component docs](https://softform-34r5.netlify.app/docs.html), and [Storybook](https://softform-34r5.netlify.app/storybook/) to inspect these rules in working pages.
+
 ## Color and material
 
 The CSS variables in `src/styles.css` control the system. `--sf-bg` is the page canvas, `--sf-surface` is the card, `--sf-ink` is primary text, `--sf-muted` is secondary text, and `--sf-accent` is the highlight. Raised and low surfaces have restrained shadows. Inset surfaces mark controls and wells. Use a dark surface for a deliberate focal point, not as a default page treatment.

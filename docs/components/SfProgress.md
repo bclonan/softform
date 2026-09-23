@@ -2,6 +2,8 @@
 
 A native progress element with a label and numeric output. Values represent real state supplied by the host.
 
+[Live demo](https://softform-34r5.netlify.app/docs.html?component=SfProgress) · [Storybook](https://softform-34r5.netlify.app/storybook/?path=/story/components-sfprogress--default)
+
 ```vue
 <sf-progress :value="progress"
   label="Processing components" />

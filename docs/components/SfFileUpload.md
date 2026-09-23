@@ -2,6 +2,8 @@
 
 Choose or drop a local file. The component emits a File object; it does not send data anywhere. Accept filters the chooser only; validate dropped files in your application.
 
+[Live demo](https://softform-34r5.netlify.app/docs.html?component=SfFileUpload) · [Storybook](https://softform-34r5.netlify.app/storybook/?path=/story/components-sffileupload--default)
+
 ```vue
 <sf-file-upload accept=".png,.jpg,.svg"
   @select="file = $event" />

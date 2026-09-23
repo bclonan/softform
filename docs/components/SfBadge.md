@@ -2,6 +2,8 @@
 
 Compact status, count, and metadata markers. Four treatments: default, accent, dark, outline.
 
+[Live demo](https://softform-34r5.netlify.app/docs.html?component=SfBadge) · [Storybook](https://softform-34r5.netlify.app/storybook/?path=/story/components-sfbadge--default)
+
 ```vue
 <sf-badge tone="accent" :dot="true">Live</sf-badge>
 ```

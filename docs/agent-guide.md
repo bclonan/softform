@@ -2,11 +2,13 @@
 
 Use [`src/component-dictionary.json`](../src/component-dictionary.json) as the component index. The package exports the same JSON at `@bclonan/softform/dictionary`. It lists all 53 components with their HTML tag, purpose, when to choose it, when to choose another component, props, events, motion, and runnable demo values. Each source component also starts with a short `SOFTFORM AGENT NOTE`.
 
+[Live component docs](https://softform-34r5.netlify.app/docs.html) · [Storybook](https://softform-34r5.netlify.app/storybook/) · [Example pages](https://softform-34r5.netlify.app/) · [npm package](https://www.npmjs.com/package/@bclonan/softform)
+
 ## Pick a component
 
 Choose by the job the user is doing, not by the visual shape. For example, `SfSelect` is a native form choice, `SfDropdown` opens secondary actions, and `SfTabs` switches content panels. `SfSegmented` changes a short mode or filter. `SfAlert` stays visible, while `SfToast` confirms a brief action. `SfSkeleton` represents a pending load, and `SfEmptyState` represents a finished empty result.
 
-Search the dictionary's `whenToUse` and `avoidWhen` fields before adding a component. Then open its `docs/components/SfName.md` page for defaults and events. The live page at `/docs.html?component=SfName` lets you try it. Every component has a Storybook entry in `stories/SfName.stories.js`.
+Search the dictionary's `whenToUse` and `avoidWhen` fields before adding a component. Then open its `docs/components/SfName.md` page for defaults and events. The live page at `https://softform-34r5.netlify.app/docs.html?component=SfName` lets you try it. Every component has a [Storybook entry](https://softform-34r5.netlify.app/storybook/) with editable controls.
 
 ## Use in Vue
 

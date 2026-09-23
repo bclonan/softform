@@ -2,6 +2,8 @@
 
 A path with a current-page marker. Earlier items emit navigate events for your router or view state.
 
+[Live demo](https://softform-34r5.netlify.app/docs.html?component=SfBreadcrumbs) · [Storybook](https://softform-34r5.netlify.app/storybook/?path=/story/components-sfbreadcrumbs--default)
+
 ```vue
 <sf-breadcrumbs :items="[\'Library\', \'Controls\', \'Dial\']"
   @navigate="navigate" />

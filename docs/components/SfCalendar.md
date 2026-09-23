@@ -2,6 +2,8 @@
 
 A selectable local calendar with month navigation and arrow-key movement between dates.
 
+[Live demo](https://softform-34r5.netlify.app/docs.html?component=SfCalendar) · [Storybook](https://softform-34r5.netlify.app/storybook/?path=/story/components-sfcalendar--default)
+
 ```vue
 <sf-calendar v-model="selectedDate" />
 ```

@@ -2,6 +2,8 @@
 
 A large figure, label, icon, change marker, and supporting context.
 
+[Live demo](https://softform-34r5.netlify.app/docs.html?component=SfStatCard) · [Storybook](https://softform-34r5.netlify.app/storybook/?path=/story/components-sfstatcard--default)
+
 ```vue
 <sf-stat-card label="Messages" :value="128"
   change="+12.8%" description="since last week" icon="mail" />

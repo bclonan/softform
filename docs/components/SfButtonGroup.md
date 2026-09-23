@@ -2,6 +2,8 @@
 
 A compact controlled group for related tools. It emits a new value without mutating props.
 
+[Live demo](https://softform-34r5.netlify.app/docs.html?component=SfButtonGroup) · [Storybook](https://softform-34r5.netlify.app/storybook/?path=/story/components-sfbuttongroup--default)
+
 ```vue
 <sf-button-group v-model="alignment"
   label="Text alignment" :options="alignments" />

@@ -3,8 +3,28 @@ import { computed, onMounted, onBeforeUnmount, ref } from 'vue';
 import { SfIcon, SfButton, SfIconButton, SfBadge, SfSurface, SfStatCard, SfBarChart, SfDonutChart, SfTable, SfTimeline, SfCalendar, SfAvatar, SfAdaptedCards, SfInput, SfSelect, SfSwitch, SfTextarea, SfSlider, SfAlert, SfToast, SfModal, SfElement } from './index.js';
 
 const path = location.pathname;
+const storybookUrl = import.meta.env.PROD ? '/storybook/' : 'http://127.0.0.1:6006/';
 const page = ref(path.includes('inbox') ? 'inbox' : path.includes('settings') ? 'settings' : 'dashboard');
 const pageTitle = computed(() => ({ dashboard: 'Overview', inbox: 'Team inbox', settings: 'Workspace settings' })[page.value]);
+const pageMetadata = {
+  dashboard: { path: '/', title: 'Softform examples', description: 'Explore 53 responsive Softform components with motion, data views, and working dashboard examples for Vue, React, and plain JavaScript.' },
+  inbox: { path: '/examples/inbox.html', title: 'Inbox | Softform', description: 'Explore a working inbox built with Softform navigation, cards, search, and feedback components.' },
+  settings: { path: '/examples/settings.html', title: 'Settings | Softform', description: 'Tune motion and interaction settings in a responsive Softform settings page.' },
+};
+function syncMetadata() {
+  const meta = pageMetadata[page.value];
+  const url = `${location.origin}${meta.path}`;
+  document.title = meta.title;
+  for (const [selector, value] of [
+    ['meta[name="description"]', meta.description],
+    ['meta[property="og:title"]', meta.title],
+    ['meta[property="og:description"]', meta.description],
+    ['meta[property="og:url"]', url],
+    ['meta[name="twitter:title"]', meta.title],
+    ['meta[name="twitter:description"]', meta.description],
+  ]) document.querySelector(selector)?.setAttribute('content', value);
+  document.querySelector('link[rel="canonical"]')?.setAttribute('href', url);
+}
 const pageOrder = ['dashboard','inbox','settings'];
 const previousPage = ref(-1);
 const navReady = ref(false);
@@ -12,9 +32,9 @@ const navMotionDelay = ref(0);
 const navMotionDuration = ref(420);
 const navMotion = ref(true);
 function navOrigin(name){const index=pageOrder.indexOf(name);return {'--sf-fill-origin':previousPage.value<0?'50%':previousPage.value<index?'0%':'100%'}}
-function readPage(){const pathname=location.pathname;previousPage.value=pageOrder.indexOf(page.value);page.value=pathname.includes('inbox')?'inbox':pathname.includes('settings')?'settings':'dashboard'}
-function navigate(name){if(page.value===name)return;previousPage.value=pageOrder.indexOf(page.value);page.value=name;history.pushState(null,'',name==='dashboard'?'/':`/examples/${name}.html`);document.title=`${pageTitle.value} · Softform`;window.scrollTo({top:0,behavior:'instant'})}
-onMounted(()=>{navReady.value=true;window.addEventListener('popstate',readPage)});
+function readPage(){const pathname=location.pathname;previousPage.value=pageOrder.indexOf(page.value);page.value=pathname.includes('inbox')?'inbox':pathname.includes('settings')?'settings':'dashboard';syncMetadata()}
+function navigate(name){if(page.value===name)return;previousPage.value=pageOrder.indexOf(page.value);page.value=name;history.pushState(null,'',pageMetadata[name].path);syncMetadata();window.scrollTo({top:0,behavior:'instant'})}
+onMounted(()=>{navReady.value=true;syncMetadata();window.addEventListener('popstate',readPage)});
 onBeforeUnmount(()=>window.removeEventListener('popstate',readPage));
 const greeting = new Intl.DateTimeFormat('en', { weekday: 'long', month: 'long', day: 'numeric' }).format(new Date());
 const notifications = ref(true);
@@ -84,7 +104,7 @@ function selectCard(card) { activity.value = `Opened ${card.title}.`; }
         <a href="/examples/planner.html"><SfIcon name="calendar" size="sm" /> Planner</a>
       </nav>
       <p class="nav-caption nav-secondary">RESOURCES</p>
-      <nav class="site-nav" aria-label="Resources"><a href="/docs.html"><SfIcon name="code" size="sm" /> Documentation</a><a href="/examples/elements-gallery.html"><SfIcon name="cube" size="sm" /> HTML gallery</a><a href="http://127.0.0.1:6006" target="_blank" rel="noreferrer"><SfIcon name="layers" size="sm" /> Storybook</a></nav>
+      <nav class="site-nav" aria-label="Resources"><a href="/docs.html"><SfIcon name="code" size="sm" /> Documentation</a><a href="/examples/elements-gallery.html"><SfIcon name="cube" size="sm" /> HTML gallery</a><a :href="storybookUrl" target="_blank" rel="noreferrer"><SfIcon name="layers" size="sm" /> Storybook</a><a href="https://www.npmjs.com/package/@bclonan/softform" target="_blank" rel="noopener noreferrer"><SfIcon name="code" size="sm" /> npm package</a></nav>
       <div class="sidebar-bottom"><div class="plan-box"><SfIcon name="spark" /><strong>Thoughtful by default.</strong><p>Components shaped for work that needs a little room to breathe.</p></div><div class="user-line"><SfAvatar initials="AM" tone="dark" /><span>Brad Morgan<small>Product designer</small></span><SfIcon name="more" size="sm" /></div></div>
     </aside>
 

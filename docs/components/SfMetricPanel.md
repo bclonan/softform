@@ -2,6 +2,8 @@
 
 A dense dashboard module combining a total, two counters, and a compact activity chart.
 
+[Live demo](https://softform-34r5.netlify.app/docs.html?component=SfMetricPanel) · [Storybook](https://softform-34r5.netlify.app/storybook/?path=/story/components-sfmetricpanel--default)
+
 ```vue
 <sf-metric-panel title="Messages" :total="84"
   :primary="63" :secondary="21" />

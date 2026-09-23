@@ -2,6 +2,8 @@
 
 Informational, warning, and error states. Errors use alert semantics; other messages use status.
 
+[Live demo](https://softform-34r5.netlify.app/docs.html?component=SfAlert) · [Storybook](https://softform-34r5.netlify.app/storybook/?path=/story/components-sfalert--default)
+
 ```vue
 <sf-alert tone="warning" title="One small thing"
   message="Review your changes before continuing." />

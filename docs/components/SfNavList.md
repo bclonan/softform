@@ -2,6 +2,8 @@
 
 A ceramic side menu with icons, counts, and a current-page marker.
 
+[Live demo](https://softform-34r5.netlify.app/docs.html?component=SfNavList) · [Storybook](https://softform-34r5.netlify.app/storybook/?path=/story/components-sfnavlist--default)
+
 ```vue
 <sf-nav-list v-model="section" :items="navigation" />
 ```

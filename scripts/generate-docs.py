@@ -98,7 +98,9 @@ for path in components:
             m = re.match(r"\s*\w+:\['(?:\\'|[^'])*','((?:\\'|[^'])*)','((?:\\'|[^'])*)'\]",line)
             if m: description, snippet = m.group(1), m.group(2).replace('\\n','\n')
             break
-    doc = f'# {name}\n\n{description}\n\n```vue\n{snippet}\n```\n\n## Props\n\n| Prop | Type | Default |\n| --- | --- | --- |\n'
+    live_links = (f'[Live demo](https://softform-34r5.netlify.app/docs.html?component={name}) · '
+                  f'[Storybook](https://softform-34r5.netlify.app/storybook/?path=/story/components-{name.lower()}--default)')
+    doc = f'# {name}\n\n{description}\n\n{live_links}\n\n```vue\n{snippet}\n```\n\n## Props\n\n| Prop | Type | Default |\n| --- | --- | --- |\n'
     doc += ''.join(f'| `{key}` | {kind} | `{default}` |\n' for key,kind,default in props) if props else '| No component props | | |\n'
     doc += '\n## Events\n\n' + (', '.join('`'+event+'`' for event in event_names) if event_names else 'None.')+'\n\n'
     doc += 'Native `class`, `style`, ARIA, and other undeclared attributes pass through to the root element.\n'

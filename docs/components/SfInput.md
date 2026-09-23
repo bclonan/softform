@@ -2,6 +2,8 @@
 
 A native input inside an inset material, with explicit label, icon, hint, and error state.
 
+[Live demo](https://softform-34r5.netlify.app/docs.html?component=SfInput) · [Storybook](https://softform-34r5.netlify.app/storybook/?path=/story/components-sfinput--default)
+
 ```vue
 <sf-input v-model="email" label="Email address"
   type="email" icon="mail" placeholder="you@studio.co" />

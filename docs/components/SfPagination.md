@@ -2,6 +2,8 @@
 
 A controlled page selector with bounded previous and next actions.
 
+[Live demo](https://softform-34r5.netlify.app/docs.html?component=SfPagination) · [Storybook](https://softform-34r5.netlify.app/storybook/?path=/story/components-sfpagination--default)
+
 ```vue
 <sf-pagination v-model="page" :pages="4" />
 ```

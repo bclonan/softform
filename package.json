@@ -1,14 +1,18 @@
 {
   "name": "@bclonan/softform",
-  "version": "1.3.0",
+  "version": "1.3.1",
   "type": "module",
   "description": "Tactile components for Vue, React, and browser-native custom elements",
+  "author": {
+    "name": "Bradley Clonan",
+    "email": "clonanxyz@gmail.com"
+  },
   "license": "MIT",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/bclonan/softform.git"
   },
-  "homepage": "https://github.com/bclonan/softform#readme",
+  "homepage": "https://softform-34r5.netlify.app/",
   "bugs": "https://github.com/bclonan/softform/issues",
   "keywords": [
     "components",
@@ -72,6 +76,7 @@
   "scripts": {
     "dev": "vite --host 127.0.0.1",
     "build": "python scripts/generate-elements.py && python scripts/generate-dictionary.py && python scripts/generate-react.py && vite build && vite build --config vite.lib.config.js && vite build --config vite.elements.config.js && node scripts/copy-types.mjs && node scripts/copy-react.mjs",
+    "build-site": "vite build && storybook build && node scripts/copy-storybook.mjs",
     "prepack": "npm run build",
     "prepublishOnly": "npm run check",
     "test": "vitest run",

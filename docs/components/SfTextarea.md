@@ -2,6 +2,8 @@
 
 A controlled native textarea with a live character count and maximum length.
 
+[Live demo](https://softform-34r5.netlify.app/docs.html?component=SfTextarea) · [Storybook](https://softform-34r5.netlify.app/storybook/?path=/story/components-sftextarea--default)
+
 ```vue
 <sf-textarea v-model="notes" label="Workspace notes"
   :maxlength="240" />

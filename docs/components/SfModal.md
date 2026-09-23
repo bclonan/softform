@@ -2,6 +2,8 @@
 
 A native modal dialog with Escape, focus containment, focus restoration, and optional footer content.
 
+[Live demo](https://softform-34r5.netlify.app/docs.html?component=SfModal) · [Storybook](https://softform-34r5.netlify.app/storybook/?path=/story/components-sfmodal--default)
+
 ```vue
 <sf-modal v-model="open" title="Create workspace">
   <p>Your new space starts here.</p>

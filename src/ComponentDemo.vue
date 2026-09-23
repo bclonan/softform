@@ -15,7 +15,8 @@ const isInput = computed(() => props.entry.name === 'SfInput');
 const isTable = computed(() => props.entry.name === 'SfTable');
 const isBar = computed(() => props.entry.name === 'SfBarChart');
 const isDonut = computed(() => props.entry.name === 'SfDonutChart');
-const storybookUrl = computed(() => `http://127.0.0.1:6006/?path=/story/components-${props.entry.name.toLowerCase()}--default`);
+const storybookBase = import.meta.env.PROD ? '/storybook/' : 'http://127.0.0.1:6006/';
+const storybookUrl = computed(() => `${storybookBase}?path=/story/components-${props.entry.name.toLowerCase()}--default`);
 let replayTimer;
 
 watch(() => props.entry.name, async name => {

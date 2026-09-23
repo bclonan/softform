@@ -2,6 +2,18 @@
 
 Softform has 53 components, including 52 from the original gallery and `SfElement` for semantic roots. Each component has Vue, React, and custom element imports, a [prop and event reference](./components/SfButton.md), a live documentation demo, and a Storybook story. The [agent guide](./agent-guide.md) explains the dictionary and selection rules. The original standalone gallery remains in `softform-component-library.html` for comparison.
 
+[Live site](https://softform-34r5.netlify.app/) · [Component docs](https://softform-34r5.netlify.app/docs.html) · [Storybook](https://softform-34r5.netlify.app/storybook/) · [npm package](https://www.npmjs.com/package/@bclonan/softform)
+
+![Softform component docs showing the SfSegmented demo](https://softform-34r5.netlify.app/screenshots/docs.png)
+
+## Install from npm
+
+```bash
+npm install @bclonan/softform
+```
+
+Add `vue` for the Vue API or `react` for the React adapters. The custom element API needs neither framework installed by the consuming app. The [React example](https://softform-34r5.netlify.app/examples/react.html) and [plain HTML example](https://softform-34r5.netlify.app/examples/elements.html) show both paths.
+
 ## Build and install locally
 
 ```bash
@@ -15,7 +27,7 @@ npm pack --pack-destination release
 In a sibling Vue project, install the tarball and Vue:
 
 ```bash
-npm install ../softform/release/bclonan-softform-1.3.0.tgz vue
+npm install ../softform/release/bclonan-softform-1.3.1.tgz vue
 ```
 
 ```vue
@@ -32,7 +44,7 @@ import '@bclonan/softform/styles.css';
 </template>
 ```
 
-Import named components for the best bundle result. The `SoftformPlugin` registers the full set when a small app prefers global components. Styles are a separate CSS import, so JavaScript imports stay free of global styling. The package name is local to this repository until it is published.
+Import named components for the best bundle result. The `SoftformPlugin` registers the full set when a small app prefers global components. Styles are a separate CSS import, so JavaScript imports stay free of global styling.
 
 For native HTML, install the tarball and register individual custom elements. No Vue app is needed. The custom element build includes its own renderer and styles.
 
@@ -101,7 +113,7 @@ The registry checks the model, rejects duplicate IDs and invalid counts, and ret
 
 ## Examples and Storybook
 
-Run `npm run dev` to view the [dashboard](/), [inbox](/examples/inbox.html), [settings](/examples/settings.html), [analytics report](/examples/analytics.html), [session planner](/examples/planner.html), [plain HTML](/examples/elements.html), [53-element gallery](/examples/elements-gallery.html), and [documentation](/docs.html) examples. The analytics report shows staged loading and programmable chart delays. The planner has a complete local booking flow. Each component page in the documentation browser has a working demo. Run `npm run storybook` for one story and live props controls per component. `npm run check` runs tests, builds the example sites and package, and builds Storybook.
+Browse the [dashboard](https://softform-34r5.netlify.app/), [inbox](https://softform-34r5.netlify.app/examples/inbox.html), [settings](https://softform-34r5.netlify.app/examples/settings.html), [analytics report](https://softform-34r5.netlify.app/examples/analytics.html), [session planner](https://softform-34r5.netlify.app/examples/planner.html), [React](https://softform-34r5.netlify.app/examples/react.html), [plain HTML](https://softform-34r5.netlify.app/examples/elements.html), [53-element gallery](https://softform-34r5.netlify.app/examples/elements-gallery.html), and [documentation](https://softform-34r5.netlify.app/docs.html) examples. The analytics report shows staged loading and programmable chart delays. The planner has a complete local booking flow. Each component page in the documentation browser has a working demo. [Storybook](https://softform-34r5.netlify.app/storybook/) has one story and live props controls per component. `npm run check` runs tests, builds the example sites and package, and builds Storybook.
 
 ## Package layout
 
